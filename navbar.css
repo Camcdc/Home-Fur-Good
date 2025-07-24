@@ -87,9 +87,12 @@
     font-weight: 500;
     font-family: 'Hind Siliguri', sans-serif;
 }
+
+/* So i added a transition so the dropdown appears smoothly */
 .dropdown-content {
-  display: none;
   position: absolute;
+  top: 100%;
+  left: 0;
   background-color: #AE9787;
   color: white;
   min-width: 160px;
@@ -97,6 +100,10 @@
   z-index: 1001;
   flex-direction: column;
   border-radius: 0 0 4px 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  pointer-events: none; /* prevent accidental hover */
 }
 .dropdown-content a {
   float: none;
@@ -106,12 +113,11 @@
   display: block;
   text-align: left;
 }
+
+/* Also made some adjustments here to make the effect of fading work */
 .dropdown:hover .dropdown-content {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto; /* Enable interaction again */
   background-color: #9d897a;
-}
-body{
-    padding-top: 70px;
-    background-color: #B6CBDF;
-    font-family: 'Hind Siliguri', sans-serif;
 }
