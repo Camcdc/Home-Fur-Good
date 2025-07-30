@@ -69,10 +69,8 @@
             <div class="form_group">
                 <label for="sex">Gender:</label>
                 <div class="radio-group">
-                    <label for="male">Male:</label>
-                    <input type="radio" id='male' name='sex' value='Male'>
-                    <label for="female">Female:</label>
-                    <input type="radio" id='female' name='sex' value='Female'>
+                    <label for="male">Male:<input type="radio" id='male' name='sex' value='Male'></label>
+                    <label for="female">Female:<input type="radio" id='female' name='sex' value='Female'></label>
                 </div>            
             </div>
         </div>
