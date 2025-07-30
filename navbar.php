@@ -1,8 +1,13 @@
 <html>
     <head>
         <link rel="stylesheet" href = "navbar.css">
+        <link rel="stylesheet" href = "login.css">
     </head>
-<header>
+
+
+<body>
+
+    <header>
 
     <div class= "topnav">
         <div class ="topnav-left">
@@ -51,12 +56,60 @@
 
         <div class = "topnav-right">
             <a href="login" class="split">Login</a>
+            <a href="#" onclick="openModal()" class="split">Login</a>
             <a href="register" class="split">Register</a>
         </div>
     </div>
-</header> 
+    </header>
 
-<body>
+
+    <div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Login</h2>
+        <form onsubmit="handleLogin(event)">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Login</button>
+        </form>
+    </div>
+    </div>
+
 </body>
+
+ 
+
+<script>
+function openModal() {
+  document.getElementById('loginModal').style.display = 'block';
+}
+
+function closeModal() {
+  document.getElementById('loginModal').style.display = 'none';
+}
+
+function handleLogin(event) {
+  event.preventDefault(); // Prevent page reload
+  const username = event.target.username.value;
+  const password = event.target.password.value;
+
+  // You can replace this with real authentication (AJAX/fetch)
+  console.log("Login submitted:", username, password);
+
+  closeModal();
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById('loginModal');
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
 
 </html>
