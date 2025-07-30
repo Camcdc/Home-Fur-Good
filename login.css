@@ -44,10 +44,10 @@ form button[type="submit"] {
   width: 100%;
   padding: 10px;
   margin-top: 16px;
-      background-color: #3a6fa0;
+  background-color: #3a6fa0;
   color: white;
   border: none;
-  border-radius: 5px;         /* Rounded corners */
+  border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
@@ -55,7 +55,7 @@ form button[type="submit"] {
 }
 
 form button[type="submit"]:hover {
-  background-color: #234667; /* Slightly darker green on hover */
+  background-color: #234667; 
 }
 
 
