@@ -55,7 +55,6 @@
         </div>
 
         <div class = "topnav-right">
-            <a href="login" class="split">Login</a>
             <a href="#" onclick="openModal()" class="split">Login</a>
             <a href="register" class="split">Register</a>
         </div>
