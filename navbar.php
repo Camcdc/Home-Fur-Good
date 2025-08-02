@@ -1,8 +1,6 @@
-<html>
-    <head>
+ 
         <link rel="stylesheet" href = "navbar.css">
-    </head>
-<header>
+        <link rel="stylesheet" href = "login.css">
 
     <div class= "topnav">
         <div class ="topnav-left">
@@ -50,13 +48,57 @@
         </div>
 
         <div class = "topnav-right">
-            <a href="login" class="split">Login</a>
+            <a href="#" onclick="openModal()" class="split">Login</a>
             <a href="register" class="split">Register</a>
         </div>
     </div>
-</header> 
 
-<body>
-</body>
 
-</html>
+    <div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Login</h2>
+        <form onsubmit="handleLogin(event)">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Login</button>
+        </form>
+    </div>
+    </div>
+
+<!--JAVASCRIPT-->
+<script>
+        function openModal() {
+        document.getElementById('loginModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            console.log("closing modal");
+        document.getElementById('loginModal').style.display = 'none';
+        }
+
+        function handleLogin(event) {
+        event.preventDefault(); 
+        const username = event.target.username.value;
+        const password = event.target.password.value;
+
+        
+        console.log("Login submitted:", username, password);
+
+        closeModal();
+        }
+
+        window.onclick = function(event) {
+        const modal = document.getElementById('loginModal');
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+        }
+</script>
+
+
+

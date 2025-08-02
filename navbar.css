@@ -63,6 +63,8 @@
     height: 100%;
     font-weight: 500;
     font-family: 'Hind Siliguri', sans-serif;
+    box-sizing: border-box;
+    line-height: 70px;
 }
 .topnav a:hover{
     background-color: #977f6f5b;
@@ -74,18 +76,21 @@
 /*Dropdown stylings*/
 .dropdown{
     position: relative;
+    line-height: 70px;
+    
 }
 .dropdown > a{
     display: flex;
     align-items: center;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 17px;
-    padding: 0px 16px; 
+    justify-content: center;
     height: 100%;
-    font-weight: 500;
+    padding: 0 16px;
+    font-size: 17px;
+    color: white;
     font-family: 'Hind Siliguri', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
 /* So i added a transition so the dropdown appears smoothly */
@@ -95,7 +100,7 @@
   left: 0;
   background-color: #AE9787;
   color: white;
-  min-width: 160px;
+  min-width: max-content;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1001;
   flex-direction: column;
@@ -103,7 +108,9 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  pointer-events: none; /* prevent accidental hover */
+  pointer-events: none;
+  white-space: nowrap;
+  width: 100%;
 }
 .dropdown-content a {
   float: none;
@@ -116,6 +123,7 @@
 
 /* Also made some adjustments here to make the effect of fading work */
 .dropdown:hover .dropdown-content {
+  line-height: 70px;
   opacity: 1;
   visibility: visible;
   pointer-events: auto; /* Enable interaction again */
