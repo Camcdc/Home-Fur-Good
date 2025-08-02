@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How You Can Help - Home Fur Good</title>
-    <link rel="stylesheet" href="login-register.css.css">
+    <link rel="stylesheet" href="../navbar functionalities/login-register.css">
+    <link rel="stylesheet" href="../navbar functionalities/navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
@@ -208,6 +209,7 @@
     </style>
 </head>
 <body>
+    <?php include '../navbar functionalities/navbar.php'?>
     <!-- You can include your navbar.php here when integrating -->
     
     <div class="help-container">

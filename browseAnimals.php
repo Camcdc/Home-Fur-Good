@@ -3,7 +3,7 @@
 
 
 <?php 
-    include 'navbar.php';
+    include 'navbar functionalities/navbar.php';
 ?>
     
 <head>

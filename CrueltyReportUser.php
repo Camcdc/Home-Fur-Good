@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cruelty Report</title> <!-- Fixed capitalization -->
+    <link rel="stylesheet" href="navbar functionalities/login-register.css">
     <link rel="stylesheet" type="text/css" href="crueltyreport.css">
+    <link rel="stylesheet" href="navbar functionalities/navbar.css">
+    
     <style>
         .row {
             display: flex;
@@ -47,22 +50,22 @@
 </head>
 <body>
 <?php
-include 'navbar.php';
+include 'navbar functionalities/navbar.php';
 ?>
 
     <h1>Report Animal Cruelty</h1>
 
    <div class="row">
-            <div class="column"><img src="phone.jpg">
+            <div class="column"><img src="pictures/phone.jpg">
             <p>Please ensure that your cellphone is on at all times</p>
             </div>
-            <div class="column"><img src="location.jpg">
+            <div class="column"><img src="pictures/location.jpg">
             <p>Please ensure that you know the location of where the incident took place.</p>
             </div>
-            <div class="column"><img src="checklist.jpg">
+            <div class="column"><img src="pictures/checklist.jpg">
             <p>Please ensure that the information is accurate for a successful rescue operation</p>
             </div>
-            <div class="column"><img src="customerSupport.jpg">
+            <div class="column"><img src="pictures/customerSupport.jpg">
             <br><a href="contact.php">Contact Us</a>
             <p>If you are experiencing any issues please contact our local support</p>
             </div>

@@ -1,15 +1,14 @@
-<?php include 'navbar.php'; ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>About Us | Home Fur Good</title>
-  <link rel="stylesheet" href="login-register.css">
-  <link rel="stylesheet" href="about.css"> <!-- New CSS file -->
+  <link rel="stylesheet" href="../navbar functionalities/login-register.css">
+  <link rel="stylesheet" href="../navbar functionalities/navbar.css">
+  <link rel="stylesheet" href="about.css"> 
 </head>
 <body>
-  <?php include 'navbar.php'; ?>
+  <?php include '../navbar functionalities/navbar.php'; ?>
 
   <div class="about-container">
     <section class="intro">

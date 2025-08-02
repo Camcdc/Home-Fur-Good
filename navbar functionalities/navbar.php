@@ -6,14 +6,14 @@
     <div class= "topnav">
         <div class ="topnav-left">
             <div class="brand">
-                <img src="logo/Log.jpg" alt="Logo" class=logo>
+                <img src="../pictures/logo/Log.jpg" alt="Logo" class=logo>
                 <h3>Home Fur Good</h3>
             </div>
 
             <a href="Home">Home</a>
 
             <div class="dropdown">
-                <a href="navbar.php">Adopt<i class="fa fa-caret-down"></i></a>
+                <a href="">Adopt<i class="fa fa-caret-down"></i></a>
                 <div class="dropdown-content">
                     <a href="Browse Animals">Browse Animals</a>
                     <a href="Adoption Process">Adoption Process</a>
@@ -29,7 +29,7 @@
             </div>
 
             <div class="dropdown">
-                <a href="navbar.php">How to help<i class="fa fa-caret-down"></i></a>
+                <a href="../landing pages/how to help.php">How to help<i class="fa fa-caret-down"></i></a>
                 <div class="dropdown-content">
                     <a href="Browse Animals">Volunteer</a>
                     <a href="Adoption Process">Foster an animal</a>
@@ -37,10 +37,10 @@
             </div>
 
             <div>
-                <a href='about.php'>About Us</a>
+                <a href='../landing pages/about.php'>About Us</a>
             </div>
             <div>
-                <a href='contact.php'>Contact Us</a>
+                <a href='../landing pages/contact.php'>Contact Us</a>
             </div>
         </div>
 
@@ -60,8 +60,8 @@
         <span class="close" onclick="closeLoginModal()">&times;</span>
         <h2>Login</h2>
         <form onsubmit="handleLogin(event)">
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" required>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" required>
 
         <label for="password">Password</label>
         <input type="password" id="password" name="password" required>
