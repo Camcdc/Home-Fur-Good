@@ -11,7 +11,7 @@
 <body>
 
 <?php
-include "Databaseconnection.php";//
+include "databaseConnection.php";//
 
 $crueltyID = $_POST["crueltyID"];
 $staffID = $_POST["staffID"];
