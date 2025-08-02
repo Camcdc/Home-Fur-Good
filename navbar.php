@@ -1,7 +1,8 @@
- 
-        <link rel="stylesheet" href = "navbar.css">
-        <link rel="stylesheet" href = "login.css">
-
+<head>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href = "login-register.css">
+</head>        
+<div class="body-content">
     <div class= "topnav">
         <div class ="topnav-left">
             <div class="brand">
@@ -48,15 +49,15 @@
         </div>
 
         <div class = "topnav-right">
-            <a href="#" onclick="openModal()" class="split">Login</a>
-            <a href="register" class="split">Register</a>
+            <a href="#" onclick='openLoginModal()' class="split">Login</a>
+            <a href="#" onclick='openRegisterModal()' class="split">Register</a>
         </div>
     </div>
-
+</div>
 
     <div id="loginModal" class="modal">
     <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
+        <span class="close" onclick="closeLoginModal()">&times;</span>
         <h2>Login</h2>
         <form onsubmit="handleLogin(event)">
         <label for="username">Username</label>
@@ -70,14 +71,56 @@
     </div>
     </div>
 
+
+
+<!--Register Modal-->
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+        <span class="close" onclick="closeRegisterModal()">&times;</span>
+        <h3>Register</h3>
+        <form onsubmit="handleRegister(event)">
+
+            <label for="firstname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="First Name" required>
+
+            <label for="surname">Surname</label>
+            <input type="text" id="sname" name="surname" placeholder="Surname" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+
+            <label for="dateofbirth">Date of Birth</label>
+            <input type="date" id="dateofbirth" name="dateofbirth" placeholder="Date of Birth" required>
+
+            <label for="cellnumber">Cell Number</label>
+            <input type="text" id="cellnumber" name="cellnumber" placeholder="Cell Number" required>
+
+            <label for="address">Adress</label>
+            <input type="text" id="address" name="address" placeholder="address" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</div>
+
+
+
+    
+
+
 <!--JAVASCRIPT-->
 <script>
-        function openModal() {
+
+    //Login
+        function openLoginModal() {
         document.getElementById('loginModal').style.display = 'block';
         }
 
-        function closeModal() {
-            console.log("closing modal");
+        function closeLoginModal() {
         document.getElementById('loginModal').style.display = 'none';
         }
 
@@ -85,19 +128,53 @@
         event.preventDefault(); 
         const username = event.target.username.value;
         const password = event.target.password.value;
+        }
 
         
         console.log("Login submitted:", username, password);
 
-        closeModal();
+        Login();
+        
+
+
+//Register
+       
+       function openRegisterModal() {
+        document.getElementById('registerModal').style.display = 'block';
         }
 
+        function closeRegisterModal() {
+        document.getElementById('registerModal').style.display = 'none';
+        }
+        
+        function handleRegister(event) {
+        event.preventDefault();
+        const firstname = event.target.firstname.value;
+        const surname = event.target.surname.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        const dateofbirth = event.target.dateofbirth.value;
+        const cellnumber = event.target.cellnumber.value;
+        const address = event.target.address.value;
+
+        console.log("Register submitted:", firstname, surname, email, password, dateofbirth, cellnumber, address);
+
+        }
+
+
         window.onclick = function(event) {
-        const modal = document.getElementById('loginModal');
-        if (event.target === modal) {
-            modal.style.display = "none";
+        const loginModal = document.getElementById('loginModal');
+        const registerModal = document.getElementById('registerModal');
+        
+        
+        if (event.target === loginModal) {
+            closeLoginModal();
+
+        }if (event.target === registerModal) {
+            closeRegisterModal();
         }
         }
+
 </script>
 
 

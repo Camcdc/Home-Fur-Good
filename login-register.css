@@ -1,8 +1,9 @@
 .modal {
   display: none;
   position: fixed;
-  z-index: 999;
-  left: 0; top: 0;
+  z-index: 9999;
+  left: 0; 
+  top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -16,6 +17,8 @@
   max-width: 400px;
   border-radius: 8px;
   position: relative;
+  overflow: auto;
+  z-index: 10000;
 }
 
 .close {
@@ -58,6 +61,10 @@ form button[type="submit"] {
 
 form button[type="submit"]:hover {
   background-color: #234667; /* Slightly darker green on hover */
+}
+.modal-open .body-content {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 
