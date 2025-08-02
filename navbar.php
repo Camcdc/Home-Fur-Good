@@ -22,7 +22,7 @@
             <div class="dropdown">
                 <a href="crueltyReport">Report Cruelty<i class="fa fa-caret-down"></i></a>
                 <div class="dropdown-content">
-                    <a href='CrueltyReport.html'>Create Report</a>
+                    <a href='CrueltyReportUser.php'>Create Report</a>
                     <a href="View existing reports">View existing reports</a>
                 </div>
             </div>

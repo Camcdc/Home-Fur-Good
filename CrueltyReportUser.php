@@ -46,6 +46,9 @@
     </style>
 </head>
 <body>
+<?php
+include 'navbar.php';
+?>
 
     <h1>Report Animal Cruelty</h1>
 
