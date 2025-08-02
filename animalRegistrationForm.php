@@ -6,12 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="registerAnimal.css">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="login-register.css">
+    <link rel="stylesheet" href="navbar functionalities/navbar.css">
+    <link rel="stylesheet" href="navbar functionalities/login-register.css">
     <title>Document</title>
-    <?php include 'navbar.php'; 
-    include 'databaseConnection.php';
-?>
 </head>
 
 <header>
@@ -19,7 +16,9 @@
 </header>
 
 <body>
-
+<?php include 'navbar functionalities/navbar.php'; 
+    include 'databaseConnection.php';
+?>
 
 <div class="form_container">
     <div class="form_heading">
@@ -51,7 +50,7 @@
                         $capacity = $row['capacity'];
                         $isFull = $occupation >= $capacity;
                         
-                        $kennelNumber = intval(substr($kennelID,1));
+                        $kennelNumber = intval(substr($kennelID,1)); //extracts 'K00001' into 1
                         $label = "Kennel $kennelNumber (" . ($isFull ? "Full" : "$occupation/$capacity") . ")";
 
                         echo "<option value='$kennelID'" . ($isFull ? " disabled" : "") . ">$label</option>";

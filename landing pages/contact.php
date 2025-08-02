@@ -1,11 +1,12 @@
-<?php include 'navbar.php'; ?>
+<?php include '../navbar functionalities/navbar.php'; ?>
 
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
             <title>Contact | Home Fur Good</title>
-            <link rel="stylesheet" href="login-register.css">
+            <link rel="stylesheet" href="../navbar functionalities/login-register.css">
+            <link rel="stylesheet" href="../navbar functionalities/navbar.css">
             <link rel="stylesheet" href="contact.css">
 </head>
 <body>
