@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+
+.topnav{
+    background-color: #AE9787;
+    overflow: visible;
+    display: flex;
+    align-items: stretch;
+    height: 70px;
+    padding: 0px 0px;
+    justify-content: space-between;
+    border: 1px solid #b6cbdfc0;
+    box-shadow: 0px 3px #7462566c;
+    align-items: center;
+
+;
+    
+
+    /*This is to fix the navbar to the top of the page*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 100%;
+    padding: 50px;
+}
+.brand h3{
+    margin: 0;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Hind Siliguri', sans-serif;
+    line-height: 1;
+}
+.logo{
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    cursor:pointer;
+}
+.topnav-left,
+.topnav-center,
+.topnav-right{
+    display: flex;
+    height: 100%;
+    gap: 0px;
+    align-items: center;
+}
+.topnav a{
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 0px 16px; 
+    height: 100%;
+    font-weight: 500;
+    font-family: 'Hind Siliguri', sans-serif;
+    box-sizing: border-box;
+    line-height: 70px;
+}
+.topnav a:hover{
+    background-color: #977f6f5b;
+    color: white;
+}
+
+
+
+/*Dropdown stylings*/
+.dropdown{
+    position: relative;
+    line-height: 70px;
+    
+}
+.dropdown > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 16px;
+    font-size: 17px;
+    color: white;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* So i added a transition so the dropdown appears smoothly */
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #AE9787;
+  color: white;
+  min-width: max-content;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1001;
+  flex-direction: column;
+  border-radius: 0 0 4px 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  pointer-events: none;
+  white-space: nowrap;
+  width: 100%;
+}
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Also made some adjustments here to make the effect of fading work */
+.dropdown:hover .dropdown-content {
+  line-height: 70px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto; /* Enable interaction again */
+  background-color: #9d897a;
+}

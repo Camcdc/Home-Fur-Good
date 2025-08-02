@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  padding-top: 80px;
+  background-color: lightblue;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  color: #333;
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.intro .highlight {
+  color: #0a2c54;
+}
+
+.intro p {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 50px;
+}
+
+.mission-values {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  text-align: left;
+  margin-bottom: 60px;
+}
+
+.mission, .values {
+  flex: 1;
+  min-width: 300px;
+}
+
+.mission h2, .values h2 {
+  font-size: 24px;
+  color: black;
+}
+
+.mission p {
+  line-height: 1.6;
+  font-size: 16px;
+  color: #444;
+}
+
+.values {
+  background: linear-gradient(to right, #005c97, #363795);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.values ul {
+  list-style: none;
+  padding: 0;
+}
+
+.values li {
+  margin: 12px 0;
+  font-size: 16px;
+}
+
+.team {
+  margin-bottom: 60px;
+}
+
+.team h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.team p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.member {
+  background-color: yellow;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(to right, #005c97, #363795);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 10px auto;
+}
+
+.member h3 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.member .role {
+  font-weight: 600;
+  color: #005c97;
+}
+
+.member p {
+  font-size: 14px;
+  color: #444;
+}
+
+.cta {
+  background: linear-gradient(to right, #005c97, #363795);
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.cta h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.cta p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btn-contact {
+  background-color: white;
+  color: #005c97;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+  background-color: #ddd;
+}
