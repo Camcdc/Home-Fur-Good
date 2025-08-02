@@ -5,7 +5,7 @@
     <head>
         <meta charset="UTF-8">
             <title>Contact | Home Fur Good</title>
-            <link rel="stylesheet" href="navbar.css">
+            <link rel="stylesheet" href="login-register.css">
             <link rel="stylesheet" href="contact.css">
 </head>
 <body>
