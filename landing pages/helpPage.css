@@ -7,7 +7,7 @@
 body {
     margin: 0;
     padding-top: 80px;
-    background-color: lightblue;
+    background-color: #AE9787; /* Changed to match navbar color */
     font-family: 'Hind Siliguri', sans-serif;
     color: #333;
     line-height: 1.7;
@@ -32,12 +32,12 @@ h1 {
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 10px;
-    color: #0a2c54;
+    color: white; /* Changed to white for contrast against new background */
 }
 
 .intro-text {
     font-size: 18px;
-    color: #444;
+    color: white; /* Changed to white for better readability */
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto 50px auto;
@@ -47,10 +47,10 @@ h1 {
 .image-placeholder {
     margin: 2rem 0;
     padding: 2rem;
-    border: 3px dashed #0a2c54;
+    border: 3px dashed white; /* Changed to white for contrast */
     border-radius: 10px;
-    background: rgba(10, 44, 84, 0.05);
-    color: #0a2c54;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    color: white;
     font-style: italic;
     font-weight: 500;
     text-align: center;
@@ -60,11 +60,15 @@ h1 {
 section {
     margin-bottom: 60px;
     text-align: left;
+    background: white; /* Added white background for content sections */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 section h2 {
     font-size: 30px;
-    color: black;
+    color: #AE9787; /* Match navbar color */
     margin-bottom: 10px;
     display: flex;
     align-items: center;
@@ -73,7 +77,7 @@ section h2 {
 
 .topic-icon {
     font-size: 24px;
-    color: #0a2c54;
+    color: #AE9787; /* Match navbar color */
 }
 
 section p {
@@ -85,13 +89,13 @@ section p {
 
 section h3 {
     font-size: 24px;
-    color: black;
+    color: #AE9787; /* Match navbar color */
     margin: 30px 0 10px 0;
 }
 
 section h4 {
     font-weight: 600;
-    color: #0a2c54;
+    color: #AE9787; /* Match navbar color */
     margin: 20px 0 10px 0;
     font-size: 18px;
 }
@@ -113,7 +117,7 @@ ul li {
 
 ul li::before {
     content: '\2713';
-    color: #0a2c54;
+    color: #AE9787; /* Match navbar color */
     font-weight: bold;
     position: absolute;
     left: 0;
@@ -130,7 +134,7 @@ ul li::before {
 }
 
 .sponsor-item {
-    background: linear-gradient(to right, #005c97, #363795);
+    background: linear-gradient(to right, #AE9787, #977f6f); /* Updated to match navbar colors */
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -153,8 +157,8 @@ ul li::before {
 
 /* Buttons */
 .btn {
-    background-color: white;
-    color: #005c97;
+    background-color: #AE9787; /* Match navbar color */
+    color: white;
     padding: 10px 20px;
     border-radius: 6px;
     text-decoration: none;
@@ -165,7 +169,7 @@ ul li::before {
 }
 
 .btn:hover {
-    background-color: #ddd;
+    background-color: #977f6f; /* Darker shade for hover */
 }
 
 /* Special sections styling */
@@ -179,7 +183,7 @@ ul li::before {
 }
 
 .values-section {
-    background: linear-gradient(to right, #005c97, #363795);
+    background: linear-gradient(to right, #AE9787, #977f6f); /* Updated gradient */
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -199,7 +203,7 @@ ul li::before {
 
 /* Call to action styling */
 .cta {
-    background: linear-gradient(to right, #005c97, #363795);
+    background: linear-gradient(to right, #AE9787, #977f6f); /* Updated gradient */
     color: white;
     padding: 40px;
     border-radius: 10px;
@@ -221,7 +225,7 @@ ul li::before {
 
 /* Footer */
 footer {
-    background: linear-gradient(to right, #005c97, #363795);
+    background: linear-gradient(to right, #AE9787, #977f6f); /* Updated gradient */
     color: white;
     text-align: center;
     padding: 40px;
