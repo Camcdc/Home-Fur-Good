@@ -5,22 +5,44 @@
     <link rel="stylesheet" href="sidebar_admin.css">
 </head>
 
+<body>
+
 <div class="sidebar">
+  <h2>Admin Panel</h2>
+  <a class="nav-link active" href="dashboard.html">Dashboard</a>
 
-    <div class="logo">
-        <h2>Admin Dashboard</h2>
-    </div>
+    <button class="dropdown-btn">Users</button>
+      <div class="dropdown-container">
+        <a href="#">View all users</a>
+        <a href="#">Add User</a>
+      </div>
 
-    <ul class="nav-links">
-        <li><a href="dashboard_admin.html">Dashboard</a></li>
-        <li><a href="dashboard_admin.html">Animals</a></li>
-        <li><a href="dashboard_admin.html">Users</a></li>
-        <li><a href="dashboard_admin.html">Applications</a></li>
-        <li><a href="dashboard_admin.html">Reports</a></li>
-        <li><a href="dashboard_admin.html">Donations</a></li>
-        <li><a href="dashboard_admin.html">Analytics</a></li>
-    </ul>
+    <button class="dropdown-btn">Applications</button>
+      <div class="dropdown-container">
+        <a href="#">Adoption Applications</a>
+        <a href="#">Volunteer Application</a>
+        <a href="#">Foster Application</a>
+      </div>
+
+    <button class="dropdown-btn">Reports</button>
+      <div class="dropdown-container">
+        <a href="#">Cruelty Reports</a>
+      </div>
+
+    <button class="dropdown-btn">Analytics</button>
+      <div class="dropdown-container">
+        <a href="#">Placeholders</a>
+
+      </div>
+
+    <button class="dropdown-btn">Logout</button>
+
+</div>
+
+<div class="main-content">
+<h3>Administrator Dashboard</h3>
 </div>
 
 
+</body>
 </html>
