@@ -5,95 +5,95 @@
 }
 
 body {
+    margin: 0;
+    padding-top: 80px;
+    background-color: lightblue;
     font-family: 'Hind Siliguri', sans-serif;
-    background: linear-gradient(135deg, #f8f6f4 0%, #ede5e0 50%, #f0e8e3 100%);
     color: #333;
     line-height: 1.7;
     min-height: 100vh;
-    padding: 2rem 0;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 40px 20px;
+    color: #333;
+    text-align: center;
 }
 
 /* Header */
 header {
     text-align: center;
-    margin-bottom: 3rem;
-    padding: 2rem 0;
+    margin-bottom: 50px;
 }
 
 h1 {
-    font-family: 'Hind Siliguri', sans-serif;
-    font-size: 3.5rem;
-    color: #AE9787;
-    margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #0a2c54;
 }
 
 .intro-text {
-    font-size: 1.2rem;
-    color: #555;
-    line-height: 1.8;
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
     max-width: 800px;
-    margin: 0 auto 2rem auto;
+    margin: 0 auto 50px auto;
 }
 
 /* Picture placeholders */
 .image-placeholder {
     margin: 2rem 0;
     padding: 2rem;
-    border: 3px dashed #AE9787;
-    border-radius: 15px;
-    background: rgba(174,151,135,0.05);
-    color: #AE9787;
+    border: 3px dashed #0a2c54;
+    border-radius: 10px;
+    background: rgba(10, 44, 84, 0.05);
+    color: #0a2c54;
     font-style: italic;
     font-weight: 500;
     text-align: center;
 }
 
-/* Main content sections - NO BOXES */
+/* Main content sections */
 section {
-    margin-bottom: 4rem;
-    padding: 0;
+    margin-bottom: 60px;
+    text-align: left;
 }
 
 section h2 {
-    font-family: 'Hind Siliguri', sans-serif;
-    font-size: 2.5rem;
-    color: #AE9787;
-    margin-bottom: 1.5rem;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
 .topic-icon {
-    font-size: 2rem;
-    color: #AE9787;
+    font-size: 24px;
+    color: #0a2c54;
 }
 
 section p {
-    color: #666;
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 section h3 {
-    font-family: 'Hind Siliguri', sans-serif;
-    font-size: 1.8rem;
-    color: #333;
-    margin: 2rem 0 1rem 0;
+    font-size: 24px;
+    color: black;
+    margin: 30px 0 10px 0;
 }
 
 section h4 {
     font-weight: 600;
-    color: #AE9787;
-    margin: 1.5rem 0 0.5rem 0;
-    font-size: 1.2rem;
+    color: #0a2c54;
+    margin: 20px 0 10px 0;
+    font-size: 18px;
 }
 
 /* Lists */
@@ -106,13 +106,14 @@ ul {
 ul li {
     position: relative;
     padding-left: 2rem;
-    margin-bottom: 0.8rem;
-    color: #666;
+    margin: 12px 0;
+    color: #444;
+    font-size: 16px;
 }
 
 ul li::before {
     content: '\2713';
-    color: #AE9787;
+    color: #0a2c54;
     font-weight: bold;
     position: absolute;
     left: 0;
@@ -123,74 +124,135 @@ ul li::before {
 .sponsor-options {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
-    margin: 1.5rem 0;
+    gap: 40px;
+    margin: 30px 0;
+    justify-content: space-between;
 }
 
 .sponsor-item {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    padding: 1rem 1.5rem;
+    background: linear-gradient(to right, #005c97, #363795);
+    color: white;
+    padding: 20px;
     border-radius: 10px;
-    border-left: 4px solid #AE9787;
+    flex: 1;
+    min-width: 250px;
 }
 
 .sponsor-item strong {
-    color: #AE9787;
+    color: white;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 10px;
+    font-size: 18px;
 }
 
 .sponsor-price {
-    font-size: 1.3rem;
+    font-size: 20px;
     font-weight: bold;
-    color: #28a745;
+    color: white;
 }
 
 /* Buttons */
 .btn {
-    display: inline-block;
-    background: linear-gradient(135deg, #AE9787 0%, #8B7A68 100%);
-    color: #fff;
-    padding: 1rem 2rem;
+    background-color: white;
+    color: #005c97;
+    padding: 10px 20px;
+    border-radius: 6px;
     text-decoration: none;
-    border-radius: 50px;
     font-weight: 600;
-    margin: 1rem 0;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(174,151,135,0.3);
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin: 20px 0;
 }
 
 .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(174,151,135,0.4);
+    background-color: #ddd;
+}
+
+/* Special sections styling */
+.mission-values {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.values-section {
+    background: linear-gradient(to right, #005c97, #363795);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.values-section h2 {
+    color: white;
+}
+
+.values-section ul li {
+    color: white;
+}
+
+.values-section ul li::before {
+    color: white;
+}
+
+/* Call to action styling */
+.cta {
+    background: linear-gradient(to right, #005c97, #363795);
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.cta h2 {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 20px;
 }
 
 /* Footer */
 footer {
-    background: linear-gradient(135deg, #333 0%, #222 100%);
-    color: #fff;
+    background: linear-gradient(to right, #005c97, #363795);
+    color: white;
     text-align: center;
-    padding: 2rem;
-    margin-top: 3rem;
-    border-radius: 15px;
+    padding: 40px;
+    margin-top: 60px;
+    border-radius: 10px;
 }
 
 footer p {
-    margin: 0.5rem 0;
-    opacity: 0.9;
+    margin: 10px 0;
+    font-size: 16px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
-        padding: 0 1rem;
+        padding: 20px 10px;
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 32px;
+    }
+
+    section h2 {
+        font-size: 24px;
     }
 
     .sponsor-options {
+        flex-direction: column;
+    }
+
+    .mission-values {
         flex-direction: column;
     }
 }
