@@ -1,23 +1,50 @@
-.sidebar{
-    height: 100vh; /*shows the full height of view*/
-    width: 250px; /*fixed width*/
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+body{
+    background-color: #B6CBDF;
+}
+.sidebar {
+    width: 220px;
     background-color: #AE9787;
-    color: white;
-    padding-top: 20px;
-    position: fixed; /*fixed to the screen when scrolling*/
-    left: 0;
+    height: 100vh;
+    position: fixed;
     top: 0;
-    overflow-y: auto;
+    bottom: 0;
+    left: 0;
 }
-.sidebar .logo{
+.sidebar h2 {
+    color: white;
+}
+.nav-link,
+.dropdown-btn {
+    display: block;
+    background: none;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
     text-align: left;
-    margin-bottom: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.nav-link.active {
     font-weight: bold;
-    font-size: 20px;
 }
-.sidebar .nav-links{
-    list-style: none;
+.dropdown-container {
+    display: none;
+    background-color: #c7b1a2;
+    padding-left: 15px;
 }
-.sidebar .nav-links li{
-    margin: 15px 0;
+.dropdown-container a {
+    padding: 8px 10px;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+.dropdown-container a:hover {
+    background-color: #d3bfae;
+}
+.main-content {
+    margin-left: 240px;
+    padding: 20px;
 }
