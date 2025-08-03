@@ -1,4 +1,4 @@
-<?php include '../navbar functionalities/navbar.php'; ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -10,6 +10,8 @@
             <link rel="stylesheet" href="contact.css">
 </head>
 <body>
+
+<?php include '../navbar functionalities/navbar.php'; ?>
 
 <div class="contact-container">
     <h1>Contact Us</h1>

@@ -59,12 +59,12 @@
     <div class="modal-content">
         <span class="close" onclick="closeLoginModal()">&times;</span>
         <h2>Login</h2>
-        <form onsubmit="handleLogin(event)">
+        <form action="../navbar functionalities/login.php" method="post">
         <label for="email">Email</label>
-        <input type="text" id="email" name="email" required>
+        <input type="text" id="loginEmail" name="loginEmail" required>
 
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
+        <input type="password" id="loginPassword" name="loginPassword" required>
 
         <button type="submit">Login</button>
         </form>
@@ -123,17 +123,6 @@
         function closeLoginModal() {
         document.getElementById('loginModal').style.display = 'none';
         }
-
-        function handleLogin(event) {
-        event.preventDefault(); 
-        const username = event.target.username.value;
-        const password = event.target.password.value;
-        }
-
-        
-        console.log("Login submitted:", username, password);
-
-        Login();
         
 
 
