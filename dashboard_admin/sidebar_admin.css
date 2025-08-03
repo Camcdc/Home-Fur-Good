@@ -1,0 +1,23 @@
+.sidebar{
+    height: 100vh; /*shows the full height of view*/
+    width: 250px; /*fixed width*/
+    background-color: #AE9787;
+    color: white;
+    padding-top: 20px;
+    position: fixed; /*fixed to the screen when scrolling*/
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+}
+.sidebar .logo{
+    text-align: left;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.sidebar .nav-links{
+    list-style: none;
+}
+.sidebar .nav-links li{
+    margin: 15px 0;
+}

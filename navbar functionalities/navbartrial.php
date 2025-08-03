@@ -1,4 +1,4 @@
-<head>
+d<head>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href = "login-register.css">
 </head>        
@@ -29,7 +29,7 @@
             </div>
 
             <div class="dropdown">
-                <a href="../landing pages/newHelp.php">How to help<i class="fa fa-caret-down"></i></a>
+                <a href="../landing pages/how to help.php">How to help<i class="fa fa-caret-down"></i></a>
                 <div class="dropdown-content">
                     <a href="Browse Animals">Volunteer</a>
                     <a href="Adoption Process">Foster an animal</a>
@@ -79,7 +79,7 @@
         <div class="modal-content">
         <span class="close" onclick="closeRegisterModal()">&times;</span>
         <h3>Register</h3>
-        <form action="navbar functionalities/userRegister.php" method="POST">
+        <form onsubmit="handleRegister(event)">
 
             <label for="Fname">First Name</label>
             <input type="text" id="Fname" name="Fname" placeholder="First Name" required>
@@ -101,15 +101,6 @@
 
             <label for="Address">Address</label>
             <input type="text" id="Address" name="Address" placeholder="Address" required>
-
-            <label for="Role">Role</label>
-            <select id="Role" name="Role" required>
-              <option value="" disabled selected>Select your role</option>
-              <option value="User">User</option>
-              <option value="Veterinarian">Veterinarian</option>
-              <option value="Administrator">Administrator</option>
-              <option value="Staff">Staff</option>  
-            </select><br><br>
 
             <button type="submit">Register</button>
         </form>
@@ -144,14 +135,6 @@
         function closeRegisterModal() {
         document.getElementById('registerModal').style.display = 'none';
         }
-
-         window.onload = function () {
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.has('register_success')) {
-            openLoginModal();
-            closeRegisterModal();
-        }
-    }
         
         function handleRegister(event) {
         event.preventDefault();
