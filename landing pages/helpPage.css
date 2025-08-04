@@ -7,7 +7,7 @@
 body {
     margin: 0;
     padding-top: 80px;
-    background-color: #AE9787; /* Changed to match navbar color */
+    background-color: #B6CBDF; /* Changed to correct background color from your palette */
     font-family: 'Hind Siliguri', sans-serif;
     color: #333;
     line-height: 1.7;
@@ -32,12 +32,12 @@ h1 {
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 10px;
-    color: white; /* Changed to white for contrast against new background */
+    color: #1B3C53; /* Changed to dark blue from your palette for better contrast */
 }
 
 .intro-text {
     font-size: 18px;
-    color: white; /* Changed to white for better readability */
+    color: #000000; /* Changed to black for better readability on light background */
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto 50px auto;
@@ -47,10 +47,10 @@ h1 {
 .image-placeholder {
     margin: 2rem 0;
     padding: 2rem;
-    border: 3px dashed white; /* Changed to white for contrast */
+    border: 3px dashed #1B3C53; /* Changed to dark blue for contrast */
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
-    color: white;
+    background: rgba(27, 60, 83, 0.1); /* Semi-transparent dark blue */
+    color: #1B3C53;
     font-style: italic;
     font-weight: 500;
     text-align: center;
@@ -60,7 +60,7 @@ h1 {
 section {
     margin-bottom: 60px;
     text-align: left;
-    background: white; /* Added white background for content sections */
+    background: #F9F3EF; /* Changed to proper background color from your palette */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -157,9 +157,10 @@ ul li::before {
 
 /* Buttons */
 .btn {
-    background-color: #AE9787; /* Match navbar color */
-    color: white;
+    background-color: #456882; /* Changed to important button color from your palette */
+    color: #FFFFFF; /* White text */
     padding: 10px 20px;
+    border: 2px solid #1B3C53; /* Border color from your palette */
     border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
@@ -169,7 +170,8 @@ ul li::before {
 }
 
 .btn:hover {
-    background-color: #977f6f; /* Darker shade for hover */
+    background-color: #1B3C53; /* Darker shade for hover */
+    color: #FFFFFF;
 }
 
 /* Special sections styling */
