@@ -109,7 +109,7 @@
               <option value="Veterinarian">Veterinarian</option>
               <option value="Administrator">Administrator</option>
               <option value="Staff">Staff</option>  
-            </select><br><br>
+            </select>
 
             <button type="submit">Register</button>
         </form>

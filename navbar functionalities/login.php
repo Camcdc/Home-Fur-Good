@@ -31,15 +31,11 @@ if($result === FALSE){
     die("<p class=\"error\">Unable to retrieve data!" .$conn->error ."</p>");
 }
 
-echo "Rows found: " . $result->num_rows . "<br>";
-echo "Email: $email<br>";
-echo "Password: $loginpassword<br>";
-
 
 if($result->num_rows==1){
     $_SESSION['access'] = "yes";
 
-    header("Location: ../dashboard.php");
+    header("Location: ../dashboard_admin/sidebar_admin.html");
     exit();
 }else{
     header("Location: index.html");
