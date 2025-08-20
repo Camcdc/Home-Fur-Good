@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Hind Siliguri', sans-serif;
+    background-color: lightblue;
+    padding-top: 80px; /* to make space for fixed navbar */
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px;
+    text-align: center;
+    color: #222;
+}
+
+.contact-container h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    background-color: #fffcd7;
+    color: #222;
+}
+
+.contact-form button {
+    background-color: #AE9787;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0px 3px #7462566c;
+}
+
+.contact-form button:hover {
+    background-color: #9d897a;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.contact-info h3 {
+    font-size: 20px;
+    margin-top: 0;
+    color: #333;
+}
+
+.contact-info p {
+    line-height: 1.6;
+}

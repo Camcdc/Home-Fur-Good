@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+    <head>
+         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <Title>Cruelty Report</Title>
+        <link rel="stylesheet" type="text/css" href="crueltyreport.css">
+    </head>
+    <body>
+        <h1>Report Animal Cruelty</h1>
+        <div class="row">
+            <div class="column"><img src="phone.jpg">
+            <p>Please ensure that your cellphone is on at all times</p>
+            </div>
+            <div class="column"><img src="location.jpg">
+            <p>Please ensure that you know the location of where the incident took place.</p>
+            </div>
+            <div class="column"><img src="checklist.jpg">
+            <p>Please ensure that the information is accurate for a successful rescue operation</p>
+            </div>
+            <div class="column"><img src="customerSupport.jpg">
+            <br><a href="ContactUs.htm">Contact Us</a>
+            <p>If you are experiencing any issues please contact our local support</p>
+            </div>
+        </div>
+        
+        <form action="CrueltyReport.php" method="POST">
+            <table>
+                <tr><td>Cruelty Report ID</td>
+                    <td><input type="text" id="crueltyID" name="crueltyID" size="20" maxlength="35" value="" required></td></tr>
+                <tr><td>Staff ID</td>
+                    <td><input type="text" id="staffID" name="staffID" size="20" maxlength="35" value="" required></td></tr>
+                <tr><td>Animal Details</td>
+                    <td><input type="text" id="animalDetails" name="animalDetails" size="20" maxlength="255"value="" required></td></tr>
+                <tr><td>Location</td>
+                    <td><input type="text" id="location" name="location" size="20" maxlength="255" value="" required></td></tr>
+                
+                 <tr><td>Investigation Status</td>
+                    <td>
+                    <select name="investigationStatus" id="investigationStatus" >
+                    <option value="">Choose Investigation Status</option>
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                    <option value="Closed">Closed</option>
+                </td>
+                </tr>
+                </select>
+                <tr>
+                    <td>Rescue Status</td>
+                    <td>
+                        <input type="text" name="rescueCircumstance" size="20" maxlength="255" value="" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Save Report"></th> 
+                    <a href="displayAllrecords.php"><button type="button" class="edit-button">Edit Report</button></a></p></td>
+                </tr>
+                <th>
+                
+
+        </table>  
+        </form> 
+       
+            
+    </body>
+</html>

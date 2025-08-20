@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Hind Siliguri', sans-serif;
+}
+body {
+    background-color: #B6CBDF;
+    font-family: 'Hind Siliguri', sans-serif;
+    margin: 0;
+    
+}
+.form_heading{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.form_heading h1{
+    margin-bottom: 0;
+}
+.form_heading h3{
+    margin-top: 0;
+    font-weight: normal;
+    font-size: 1.1rem;
+}
+.form_container{
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(3px);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    padding: 30px;
+    padding-top: 0;
+}
+.form-wrap{
+display: block;
+}
+.form_group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+.form_group label{
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+.form_group input{
+    padding: 0.5rem;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.form_group select{
+    padding: 0.5rem;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+.form_group textarea {
+  padding: 0.5rem;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+.form_row{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+form label{
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+form input[type="number"]{
+    width: 100%;
+    font-size: 17px;
+    padding:10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid  #aaa;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+form input[type="text"],
+form select{
+    font-size: 17px;
+    width: 100%;
+    padding:10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid  #aaa;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+form input[type="radio"]{
+    margin-left: 10px;
+    margin-bottom:12px;
+    border: 1px;
+    margin-top: 17px;
+
+    transform: scale(1.5);
+    cursor: pointer;
+}
+.radio-group{
+    display: flex;
+    gap: 15px;;
+    align-items: center;
+}
+.radio-group label{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal;
+}
+form input[type="submit"]{
+    width: 100%;
+    height: 50%;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #3a6fa0;
+    color: white;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+.submit-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.full_span{
+    grid-column: 1/-1;
+}
+textarea{
+    font-size: 17px;
+}
+
+
+
+/* Modal base styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Overlay everything */
+  z-index: 9999; /* Ensure it's on top of all other elements */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+}
+
+/* Modal content styles */
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 30px;
+  border: 1px solid #888;
+  width: 40%;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Close button (X) */
+.modal-content .close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+}
+
+.modal-content .close:hover {
+  color: #000;
+}
+

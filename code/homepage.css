@@ -1,0 +1,111 @@
+
+.hero-image{
+    background-image: url("images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.hero-text {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px 60px;
+    border-radius: 16px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+h1{
+    color: #fff;
+    font-size: 3em;
+    text-align: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+div.row.h1{
+    color:#333;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+h2{
+    color: #fff;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+H3{
+    color: #333;
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: 600;}
+button{
+    background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
+    border: none;
+    color: #fff;
+    padding: 15px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 16px 12px 0 12px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    transition: background 0.3s, transform 0.2s;
+}
+button:hover {
+    background: linear-gradient(90deg, #0056b3 0%, #007bff 100%);
+    transform: translateY(-2px) scale(1.04);
+}
+
+.row.p {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px 0;
+}
+.column {
+    flex: 1 1 220px;
+    max-width: 260px;
+    min-width: 180px;
+    background: #f8f9fa;
+    margin: 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 32px 18px;
+    text-align: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #333;
+    transition: box-shadow 0.2s;
+}
+.column:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+    background: #e9ecef;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #e3eafc;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
