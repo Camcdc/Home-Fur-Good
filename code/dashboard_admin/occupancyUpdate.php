@@ -15,4 +15,21 @@ function updateKennelOccupancy($conn, $kennelID) {
         }
     }
 }
+
+// FUNCTION TO DECREASE OCCUPANCY IN THE ANIMAL REGISTRATION FORM
+function decreaseKennelOccupancy($conn, $kennelID) {
+    $check = $conn->prepare("SELECT occupation FROM kennel WHERE kennelID = ?");
+    $check->bind_param("s", $kennelID);
+    $check->execute();
+    $result = $check->get_result();
+
+    if ($result && $row = $result->fetch_assoc()) {
+        if ($row['occupation'] > 0) { // prevents negative numbers
+            $update = $conn->prepare("UPDATE kennel SET occupation = occupation - 1 WHERE kennelID = ?");
+            $update->bind_param("s", $kennelID);
+            $update->execute();
+        }
+    }
+}
+
 ?>

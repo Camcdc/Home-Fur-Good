@@ -27,6 +27,82 @@ p {
 }
 
 
+/*FILTERS*/
+.content-container {
+    max-width: 1200px; /* or whatever matches your design */
+    margin: 0 auto;
+}
+.content-container table {
+    width: 100%;
+    border-collapse: collapse; /* makes table nicer */
+}
+.section-box {
+    background-color: #f1f5f9;
+    border-radius: 12px;
+    padding-bottom: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    margin: 20px 0; /* no auto here */
+    width: 100%; /* full width of container */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+}
+
+
+
+.section-title {
+    margin: 0 0 15px 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #2c3e50;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #a2bbd3;
+}
+
+.filters-form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.filter-input,
+.filter-select {
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    flex: 1;
+    min-width: 200px;
+    height: 44px;
+    color: #333;
+}
+
+.filter-button {
+    background-color: #3a6fa0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    height: 44px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-button:hover {
+    background-color: #316393;
+}
+
+
+
+
+
+
 /*TABLE*/
 table {
     width: 95%;

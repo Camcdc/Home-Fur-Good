@@ -38,9 +38,27 @@ if($result->num_rows==1){
 
     //verify password
     if(password_verify($loginpassword, $hashedPassword)){
+    
+    
+    //ROLE HANDLING
     $_SESSION['access'] = "yes";
+    $_SESSION['userID'] = $row['userID'];
+    $_SESSION['Fname'] = $row['Fname'];
+    $_SESSION['Sname'] = $row['Sname'];
+    $_SESSION['role'] = $row['Role'];
 
-    header("Location: ../dashboard_admin/dashboard_admin.php");
+    if($_SESSION['role'] === 'Administrator'){
+        header("Location: ../dashboard_admin/dashboard_admin.php");
+    }elseif($_SESSION['role'] === 'User'){
+        header("Location: ../dashboard_admin/dashboard_user.php");
+    }elseif($_SESSION['role'] === 'Veterinarian'){
+        header("Location: ../dashboard_admin/dashboard_veterinarian.php");
+    } 
+     
+    
+    
+    
+    
     exit();
         }else{
             echo "<p class=\"error\">Incorrect password.</p>";

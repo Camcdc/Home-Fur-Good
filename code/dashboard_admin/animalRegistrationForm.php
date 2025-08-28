@@ -18,7 +18,6 @@
 <?php 
     include '../databaseConnection.php';
     include 'sidebar_admin.php';
-    //include 'registerAnimal.php';
 ?>
 
 <div class="form_container">
@@ -31,12 +30,12 @@
 
         <div class="form_row">
             <div class="form_group">
-                <label for="animalID">Animal ID:</label>
-                <input type="text" id='animalID' name='animalID' required>
+                <label for="name">Name:</label>
+                <input type="text" id='name' name='name' required>
             </div>
 
             <div class="form_group">
-                <label for="kennelID">Kennel ID:</label>
+                <label for="kennelID">Kennel:</label>
                 <select name="kennelID" id="kennelID">
                     <option value="" disabled selected>Select animal kennel</option>
                     
@@ -51,7 +50,7 @@
                         $capacity = $row['capacity'];
                         $isFull = $occupation >= $capacity;
                         
-                        $kennelNumber = intval(substr($kennelID,1)); //extracts 'K00001' into 1
+                        $kennelNumber = intval($kennelID); 
                         $label = "Kennel $kennelNumber (" . ($isFull ? "Full" : "$occupation/$capacity") . ")";
 
                         echo "<option value='$kennelID'" . ($isFull ? " disabled" : "") . ">$label</option>";
@@ -61,17 +60,6 @@
             </div>
         </div>
 
-        <div class="form_row">
-            <div class="form_group">
-                <label for="name">Status ID:</label>
-                <input type="text" id='statusID' name='statusID' required>
-            </div>
-
-            <div class="form_group">
-                <label for="name">Name:</label>
-                <input type="text" id='name' name='name' required>
-            </div>
-        </div>
 
         <div class="form_row"> 
             <div class="form_group">       

@@ -24,7 +24,7 @@
 
   <button class="dropdown-btn">Reports <i class="fa-solid fa-caret-down"></i></button>
   <div class="dropdown-container">
-    <a href="#">Cruelty Reports</a>
+    <a href="displayAllrecords.php">Cruelty Reports</a>
   </div>
 
   <button class="dropdown-btn">Analytics <i class="fa-solid fa-caret-down"></i></button>
