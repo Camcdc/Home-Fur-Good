@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hind Siliguri', sans-serif;
+    background: linear-gradient(100deg, #b6cbdf, #bfd1e1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #2d3748;
+}
+
+.auth-wrapper {
+    margin-top: 50px !important;
+    background: #ffffff; 
+    padding: 2.5rem 3rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+}
+
+.auth-wrapper h1 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #1a202c;
+    text-align: left;
+}
+
+.auth-wrapper h2 {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    color: #1a202c;
+}
+
+.auth-wrapper p.welcome {
+    margin-bottom: 1.8rem;
+    color: #4a5568;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Form grid: 2 columns (label+input pairs) */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    gap: 1.3rem 2rem;
+}
+
+
+/* Label styles */
+form label {
+    font-weight: 500;
+  color: #4a5568;
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Inputs */
+form input,
+form textarea,
+form select {
+    padding: 0.6rem 0.9rem;
+    border: 1px solid #cbd5e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #f9fafb;
+    transition: all 0.25s ease;
+    width: 100%;
+}
+
+/* Focus */
+form input:focus,
+form textarea:focus,
+form select:focus {
+    border-color: #3a6fa0;
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(49,130,206,0.15);
+    outline: none;
+}
+
+/* Textarea and select spanning full width */
+textarea,
+select {
+    grid-column: 1 / 3; 
+}
+
+
+/* Submit button full width */
+form button {
+  grid-column: 1 / -1;
+  padding: 0.85rem;
+  background: #3a6fa0;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+form button:hover {
+    background: #2b6cb0;
+    transform: translateY(-2px);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+/* Error message full width */
+.error {
+    grid-column: 1 / 5;
+    color: #e53e3e;
+    background: #fff5f5;
+    border: 1px solid #fed7d7;
+    padding: 0.6rem;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* Switch link full width */
+.switch {
+    grid-column: 1 / 5;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #4a5568;
+}
+
+.switch a {
+    color: #3a6fa0;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.switch a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive for small screens */
+@media (max-width: 600px) {
+    form {
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+    }
+    form label {
+        margin-bottom: 0.3rem;
+    }
+    form input,
+    form textarea,
+    form select,
+    form button,
+    .error,
+    .switch {
+        grid-column: 1 / 2 !important;
+        max-width: 100%;
+    }
+}
