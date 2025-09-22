@@ -1,14 +1,14 @@
 body {
   margin: 0;
   padding-top: 80px;
-  background-color: lightblue;
+  background-color: #b6cbdf;
   font-family: 'Hind Siliguri', sans-serif;
 }
 
 .about-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 40px 20px;
+  max-width: 1800px;
+  margin: 2rem auto 0 auto;
+  padding: 1px 1px;
   color: #333;
   text-align: center;
 }
@@ -43,6 +43,15 @@ body {
   min-width: 300px;
 }
 
+.mission {
+  background: white;
+  color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.08);
+  margin-right: 0;
+}
+
 .mission h2, .values h2 {
   font-size: 24px;
   color: black;
@@ -55,7 +64,7 @@ body {
 }
 
 .values {
-  background: linear-gradient(to right, #005c97, #363795);
+  background: #3a6fa0;;
   color: white;
   padding: 20px;
   border-radius: 10px;
@@ -94,7 +103,7 @@ body {
 }
 
 .member {
-  background-color: yellow;
+  background-color: white;
   padding: 20px;
   border-radius: 10px;
   width: 250px;
@@ -104,7 +113,7 @@ body {
 .circle {
   width: 80px;
   height: 80px;
-  background: linear-gradient(to right, #005c97, #363795);
+  background: linear-gradient(to right, #3a6fa0, #363795);
   color: white;
   font-weight: bold;
   font-size: 20px;
@@ -131,10 +140,11 @@ body {
 }
 
 .cta {
-  background: linear-gradient(to right, #005c97, #363795);
+  background: linear-gradient(to right, #3a6fa0, #363795);
   color: white;
   padding: 40px;
   border-radius: 10px;
+  margin-bottom: 40px;
 }
 
 .cta h2 {

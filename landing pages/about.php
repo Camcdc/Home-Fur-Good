@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="../navbar functionalities/login-register.css">
   <link rel="stylesheet" href="../navbar functionalities/navbar.css">
   <link rel="stylesheet" href="about.css"> 
+  <link rel="icon" href="../pictures/logo/Log.jpg" type="image/jpeg">
 </head>
 <body>
   <?php include '../navbar functionalities/navbar.php'; ?>
@@ -47,22 +48,34 @@
       <p>The passionate professionals behind our success</p>
       <div class="team-members">
         <div class="member">
-          <div class="circle">SJ</div>
-          <h3>Soms</h3>
-          <p class="role">CEO</p>
-          <p>Has alot of experince</p>
+          <div class="circle">SN</div>
+          <h3>Somila Ndokweni</h3>
+          <p class="role">System Analyst</p>
+          <p>Has 3 years of experience of system analysis.</p>
         </div>
         <div class="member">
           <div class="circle">MB</div>
           <h3>Michael Bradshaw</h3>
           <p class="role">Project Manager</p>
-          <p>Technical expert passionate about building scalable solutions.</p>
+          <p>Passionate about building scalable solutions and leading teams to success.</p>
         </div>
         <div class="member">
-          <div class="circle">ER</div>
+          <div class="circle">CC</div>
           <h3>Cameron Campbell</h3>
-          <p class="role">Head of Design</p>
-          <p>Creative professional focused on exceptional user experiences.</p>
+          <p class="role">Database Administrator</p>
+          <p>Creative professional focused on exceptional user experiences and database management.</p>
+        </div>
+        <div class="member">
+          <div class="circle">MM</div>
+          <h3>Melusi Mbuli</h3>
+          <p class="role">Lead Developer</p>
+          <p>Full-stack developer with a passion for animal welfare tech.</p>
+        </div>
+        <div class="member">
+          <div class="circle">NN</div>
+          <h3>Nompumelelo Nkosi</h3>
+          <p class="role">Business Analyst</p>
+          <p>Engages the public and coordinates outreach and events from a business perspective.</p>
         </div>
       </div>
     </section>
@@ -73,5 +86,32 @@
       <a href="contact.php" class="btn-contact">Contact Us</a>
     </section>
   </div>
+
+
+    <!--success message for registration (INCLUDE IN ALL LANDING PAGES)-->  
+      <?php if (isset($_GET['register_success'])): ?>
+    <script>
+      const loginModal = document.getElementById('loginModal');
+      if (loginModal) loginModal.style.display = 'block';
+
+      const successMsg = document.getElementById('registerSuccessMessage');
+      if (successMsg) successMsg.style.display = 'block';
+    </script>
+    <?php endif; ?>
+
+<?php include 'footer.php'; ?>
 </body>
 </html>
+
+<script>
+
+  //checks if register_success is in the URL (INCLUDE IN ALL LANDING PAGES)
+  window.onload = function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('register_success')) {
+        closeRegisterModal();
+        openLoginModal();
+    }
+}
+
+</script>

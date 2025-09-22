@@ -1,187 +1,95 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>Navbar</title>
     <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href = "login-register.css">
-</head>        
-<div class="body-content">
-    <div class= "topnav">
-        <div class ="topnav-left">
-            <div class="brand">
-                <img src="../pictures/logo/Log.jpg" alt="Logo" class=logo>
-                <h3>Home Fur Good</h3>
-            </div>
+    <link rel="stylesheet" href="login-register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
 
-            <a href="Home">Home</a>
+<div class="topnav">
+    <div class="topnav-left">
+        <div class="brand">
+            <img src="../pictures/logo/Log.jpg" alt="Logo" class="logo">
+            <h3>Home Fur Good</h3>
+        </div>
 
-            <div class="dropdown">
-                <a href="">Adopt<i class="fa fa-caret-down"></i></a>
-                <div class="dropdown-content">
-                    <a href="Browse Animals">Browse Animals</a>
-                    <a href="Adoption Process">Adoption Process</a>
-                </div>
-            </div>
+        <a href="../landing pages/homepage.php" class="split">Home</a>
 
-            <div class="dropdown">
-                <a href="crueltyReport">Report Cruelty<i class="fa fa-caret-down"></i></a>
-                <div class="dropdown-content">
-                    <a href='CrueltyReportUser.php'>Create Report</a>
-                    <a href="View existing reports">View existing reports</a>
-                </div>
-            </div>
+        <div class="dropdown">
+            <a href="../landing pages/browseAnimals.php">Browse Animals</a>
 
-            <div class="dropdown">
-                <a href="../landing pages/newHelp.php">How to help<i class="fa fa-caret-down"></i></a>
-                <div class="dropdown-content">
-                    <a href="Browse Animals">Volunteer</a>
-                    <a href="Adoption Process">Foster an animal</a>
-                </div>
-            </div>
+        </div>
 
-            <div>
-                <a href='../landing pages/about.php'>About Us</a>
-            </div>
-            <div>
-                <a href='../landing pages/contact.php'>Contact Us</a>
+        <div class="dropdown">
+            <a href="../dashboard_user/CrueltyReportInfor.php">Report Cruelty</a>
+        </div>
+
+        <div class="dropdown">
+            <a href="">How to help <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content">
+                <a href="../landing pages/volunteerLanding.php">Volunteer</a>
+                <a href="../landing pages/foster_landing.php">Foster an animal</a>
             </div>
         </div>
 
-        <div class ="topnav-center">
-            <a id = 'Donate' href="donate" class="split">Donate</a>
-        </div>
-
-        <div class = "topnav-right">
-            <a href="#" onclick='openLoginModal()' class="split">Login</a>
-            <a href="#" onclick='openRegisterModal()' class="split">Register</a>
-        </div>
+        <a href="../landing pages/about.php">About Us</a>
+        <a href="../landing pages/contact.php">Contact Us</a>
     </div>
+
+    <div class="topnav-center">
+        <?php if(isset($_SESSION['userID']) && in_array($_SESSION['Role'] ?? '', ['User'])): ?>
+        <a id="Donate" href="../dashboard_user/donations.php">Donate</a>
+        <?php endif; ?>
+    </div>
+
+    <div class="topnav-right">
+    <?php if (isset($_SESSION['userID']) && in_array($_SESSION['Role'] ?? '', ['User', 'Volunteer', 'Fosterer'])): ?>
+        <div class="dropdown user-dropdown">
+            <a href="#">Welcome, <?php echo " " . $_SESSION['Fname'];?> <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content right-dropdown">
+                <a href="../dashboard_user/myProfile.php">My Profile</a>
+                <a href="../dashboard_user/adoptionStatus.php">Adoptions</a>
+                <a href="../dashboard_user/volunteer_dashboard.php">Volunteering</a>
+                <a href="../dashboard_user/foster_dashboard.php">Fostering</a>
+                <a href="../dashboard_user/crueltyreportreceipt.php">My Cruelty Reports</a>
+                <a href="../dashboard_user/donationreceipt.php?userID=<?php echo urlencode($_SESSION['userID']); ?>">My Donations</a>
+                <a href="../logout.php">Logout</a>
+            </div>
+        </div>
+    <?php else: ?>
+        <a href="../navbar functionalities/userLoginC.php?redirect=<?= urlencode($_SERVER['REQUEST_URI']) ?>">Login</a>
+        <a href="../navbar functionalities/userRegisterC.php">Register</a>
+    <?php endif; ?>
 </div>
 
-    <div id="loginModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeLoginModal()">&times;</span>
-        <h2>Login</h2>
-        <form action="../navbar functionalities/login.php" method="post">
-        <label for="email">Email</label>
-        <input type="text" id="loginEmail" name="loginEmail" required>
-
-        <label for="password">Password</label>
-        <input type="password" id="loginPassword" name="loginPassword" required>
-
-        <button type="submit">Login</button>
-        </form>
-    </div>
-    </div>
-
-
-
-<!--Register Modal-->
-
-    <div id="registerModal" class="modal">
-        <div class="modal-content">
-        <span class="close" onclick="closeRegisterModal()">&times;</span>
-        <h3>Register</h3>
-        <form action="navbar functionalities/userRegister.php" method="POST">
-
-            <label for="Fname">First Name</label>
-            <input type="text" id="Fname" name="Fname" placeholder="First Name" required>
-
-            <label for="Sname">Surname</label>
-            <input type="text" id="Sname" name="Sname" placeholder="Surname" required>
-
-            <label for="Email">Email</label>
-            <input type="email" id="Email" name="Email" placeholder="Email" required>
-
-            <label for="Password">Password</label>
-            <input type="password" id="Password" name="Password" placeholder="Password" required>
-
-            <label for="DateOfBirth">Date of Birth</label>
-            <input type="date" id="DateOfBirth" name="DateOfBirth" placeholder="Date of Birth" required>
-
-            <label for="CellNumber">Cell Number</label>
-            <input type="text" id="CellNumber" name="CellNumber" placeholder="Cell Number" required>
-
-            <label for="Address">Address</label>
-            <input type="text" id="Address" name="Address" placeholder="Address" required>
-
-            <label for="Role">Role</label>
-            <select id="Role" name="Role" required>
-              <option value="" disabled selected>Select your role</option>
-              <option value="User">User</option>
-              <option value="Veterinarian">Veterinarian</option>
-              <option value="Administrator">Administrator</option>
-              <option value="Staff">Staff</option>  
-            </select>
-
-            <button type="submit">Register</button>
-        </form>
-    </div>
 </div>
 
+</body>
+</html>
 
-
-    
-
-
-<!--JAVASCRIPT-->
 <script>
+function toggleProfileSidebar() {
+    document.getElementById('profile-sidebar').classList.toggle('active');
+}
 
-    //Login
-        function openLoginModal() {
-        document.getElementById('loginModal').style.display = 'block';
-        }
+window.addEventListener('click', function(event) {
+    const sidebar = document.getElementById('profile-sidebar');
+    const toggle = document.querySelector('.profile-toggle');
 
-        function closeLoginModal() {
-        document.getElementById('loginModal').style.display = 'none';
-        }
-        
-
-
-//Register
-       
-       function openRegisterModal() {
-        document.getElementById('registerModal').style.display = 'block';
-        }
-
-        function closeRegisterModal() {
-        document.getElementById('registerModal').style.display = 'none';
-        }
-
-         window.onload = function () {
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.has('register_success')) {
-            openLoginModal();
-            closeRegisterModal();
-        }
+    if (!sidebar.contains(event.target) && !toggle.contains(event.target)) {
+        sidebar.classList.remove('active');
     }
-        
-        function handleRegister(event) {
-        event.preventDefault();
-        const firstname = event.target.Fname.value;
-        const surname = event.target.Sname.value;
-        const email = event.target.Email.value;
-        const password = event.target.Password.value;
-        const dateofbirth = event.target.DateOfBirth.value;
-        const cellnumber = event.target.CellNumber.value;
-        const address = event.target.Address.value;
-
-        console.log("Register submitted:", firstname, surname, email, password, dateofbirth, cellnumber, address);
-
-        }
-
-
-        window.onclick = function(event) {
-        const loginModal = document.getElementById('loginModal');
-        const registerModal = document.getElementById('registerModal');
-        
-        
-        if (event.target === loginModal) {
-            closeLoginModal();
-
-        }if (event.target === registerModal) {
-            closeRegisterModal();
-        }
-        }
-
+});
 </script>
 
-
-
+</body>
+</html>

@@ -14,7 +14,6 @@ $conn = new mysqli($serverName, $user, $password, $database);
 if($conn->connect_error){
     die("Connection to the server and database failed" .$conn->connect_error);
 } else {
-    echo "Successfully connected to server on" . $currenttime;
 }
 
 ?>

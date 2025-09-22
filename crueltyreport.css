@@ -1,42 +1,78 @@
-h1 {
-    color: #2a3a5e;
-    text-align: center;
-    font-size: 2.2em;
-    margin-bottom: 24px;
-    letter-spacing: 1px;
+/* Import font for consistency */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+/* Reset & Base */
+* {
+    font-family: 'Hind Siliguri', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', 'Arial', sans-serif;
+    background-color: #B6CBDF;
     font-size: 16px;
-    background-color: #f4f7fa;
-    color: #222;
+    color: #333;
+    line-height: 1.6;
 }
 
-.row {
-    display: flex;
-    justify-content: space-between;
+/* Headings */
+h1, h2 {
+    text-align: center;
+    color: white;
+    padding: 20px 0 0 0;
+    font-size: 2.2em;
+    letter-spacing: 1px;
     margin-bottom: 24px;
 }
 
-.column {
-    flex: 1;
-    padding: 24px;
-    text-align: center;
-    background-color: #e8eef6;
-    margin: 8px;
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(44,62,80,0.06);
+/* Section Layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px auto;
+    max-width: 1200px;
+    gap: 20px;
+    padding: 0 20px;
 }
 
-.column img {
+.column {
+    flex: 1 1 250px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 8px;
+}
+
+.column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.full-width {
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-align: center;
+    background: #fff;
+}
+
+/* Images */
+.column img,
+img.uploaded-picture {
     width: 100%;
     max-width: 120px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 1px 4px rgba(44,62,80,0.10);
+    display: block;
+    margin: 0 auto 15px auto;
 }
 
+/* Table */
 table {
     border-collapse: separate;
     border-spacing: 0;
@@ -45,8 +81,8 @@ table {
     box-shadow: 0 2px 12px rgba(44,62,80,0.08);
     border-radius: 12px;
     overflow: hidden;
-    width: 90%;
-    max-width: 900px;
+    width: 100%;
+    max-width: 600px; /* Make table narrower for better appearance */
 }
 
 th, td {
@@ -55,8 +91,8 @@ th, td {
 }
 
 th {
-    background-color: #e8eef6;
-    color: #2a3a5e;
+    background-color: #eaf6f6;
+    color: #2f5c89;
     font-weight: 600;
     border-bottom: 2px solid #b6cbdf;
 }
@@ -64,41 +100,90 @@ th {
 td {
     font-weight: 400;
     color: #333;
-    border-bottom: 1px solid #e8eef6;
+    border-bottom: 1px solid #eaf6f6;
 }
 
 tr:last-child td {
     border-bottom: none;
 }
 
-/*tr:hover {
-    background-color: #f0f6ff;
-}*/
-
+/* Buttons */
 input[type="submit"], button {
-    background: linear-gradient(90deg, #2a3a5e 0%, #4e7ac7 100%);
-    color: #fff;
+    background: #3a6fa0;
+    color: white;
     border: none;
     padding: 10px 22px;
-    border-radius: 6px;
+    border-radius: 8px;
     font-size: 1em;
     cursor: pointer;
+    font-weight: 600;
     box-shadow: 0 1px 4px rgba(44,62,80,0.10);
-    transition:  0.5s;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
 }
 
 input[type="submit"]:hover, button:hover {
-    background: linear-gradient(90deg, #4e7ac7 0%, #2a3a5e 100%);
+    background: #2f5c89;
+    transform: scale(1.05);
 }
 
+/* Links */
 a {
     text-decoration: none;
-    color: #2a3a5e;
-    transition: color 0.5s;
+    color: #3a6fa0;
+    transition: color 0.3s;
+    font-weight: 500;
 }
 
 a:hover {
-    color: #4e7ac7;
+    color: #2f5c89;
 }
 
+/* Form Elements */
+input[type="file"], input[type="text"], select, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'Hind Siliguri', sans-serif;
+    transition: border-color 0.3s;
+    margin-bottom: 15px;
+}
 
+input[type="file"]:focus, input[type="text"]:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #3a6fa0;
+}
+
+/* Form Container */
+.form {
+    display: block;
+    margin: 0 auto;
+    max-width: auto;
+    padding: 32px 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 1.5em;
+    }
+    .row {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    .column {
+        margin: 10px 0;
+    }
+    table {
+        width: 100%;
+    }
+    .form {
+        padding: 16px;
+    }
+}
