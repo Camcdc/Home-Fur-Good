@@ -1,0 +1,94 @@
+/* Import font for consistency */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+body {
+    background: #b6cbdf;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #24527a;
+    padding: 40px 0 0 0;
+    font-size: 2.5em;
+    letter-spacing: 1.5px;
+    margin-bottom: 32px;
+    font-weight: 700;
+    text-shadow: 0 2px 8px #eaf6fa;
+}
+.form-container {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(44,62,80,0.10);
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px 32px;
+    border: 1px solid #eaf6fa;
+    transition: box-shadow 0.2s;
+}
+.form-container:hover {
+    box-shadow: 0 12px 48px rgba(44,62,80,0.13);
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+.pledge-content {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(44,62,80,0.10);
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 32px 24px;
+    border: 1px solid #eaf6fa;
+    text-align: center;
+}
+.pledge-content h4 {
+    color: #24527a;
+    font-size: 1.2em;
+    margin: 18px 0 8px 0;
+    font-weight: 600;
+}
+.pledge-content p {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 18px;
+}
+#pledge-amount {
+    color: #58c592;
+    font-weight: bold;
+    font-size: 1.15em;
+}
+button {
+    background: #3a6fa0;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+button:hover {
+    background: #2f5c89;
+    transform: scale(1.05);
+}
+input[type="checkbox"] {
+    accent-color: #3a6fa0;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+img{
+    display: flex;
+    margin: 0 auto 20px auto;
+    max-width: 250px;
+    border-radius: 45%;
+}

@@ -1,0 +1,238 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+/* General Reset and Base Styles */
+* {
+    font-family: 'Hind Siliguri', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #B6CBDF;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero-image {
+    background: url("../images/hero.jpg") no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-image::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.hero-text h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+/* Section Layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px auto;
+    max-width: 1200px;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.column {
+    flex: 1 1 250px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+ul {
+    list-style-type: none;  
+    padding-left: 0;       
+}
+
+
+.full-width {
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-align: center;
+    background: #fff;
+}
+
+/* Animal Cards Layout */
+/* Animal Grid Layout */
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center; /* Centers items horizontally */
+}
+
+/* Animal Card Styling */
+.animal-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* Card Image Styling */
+.card-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Description Styling */
+.animal-description {
+    margin-bottom: 1em;
+}
+
+.animal-description h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.limited-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Limits the description to 3 lines */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Shows "..." if the text is too long */
+    white-space: normal; /* Allows text to wrap inside the box */
+}
+
+/* Buttons */
+button {
+    background: #3a6fa0;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    margin-top: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: #2f5c89;
+    transform: scale(1.05);
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+    .animal-grid {
+        grid-template-columns: 1fr; /* Stacks cards vertically on small screens */
+    }
+
+    .animal-card {
+        max-width: 100%;
+    }
+
+    .card-img {
+        height: 200px; /* Reduces image height on mobile */
+    }
+}
+.partners img {
+    width: auto;
+    height: 80px; 
+    margin-right: 20px; 
+    object-fit: contain; 
+}
+.team-member img{
+    width: auto;
+    height: 100px;
+    object-fit: contain;
+}
+
+
+progress {
+    width: 100%; 
+    height: 30px; 
+    border-radius: 15px; 
+    background: #e3eafc; 
+}
+
+progress::-webkit-progress-bar {
+    background: #e3eafc; 
+    border-radius: 15px; 
+}
+
+progress::-webkit-progress-value {
+    background: #58c592; 
+    border-radius: 15px; 
+}
+
+progress::-moz-progress-bar {
+    background: #58c592; 
+    border-radius: 15px; 
+}
+
+#backToTopBtn {
+    display: none; /* Initially hidden */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2f5c89;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10%;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#backToTopBtn:hover {
+    background-color: #0056b3;
+}

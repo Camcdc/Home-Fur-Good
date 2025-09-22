@@ -1,0 +1,195 @@
+body {
+    background: #e0eafc;
+    font-family: 'Hind Siliguri', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+.adoption-status-main {
+    max-width: 900px;
+    margin: 7rem auto;
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.adoption-status-main h1 {
+    text-align: center;
+    color: #3a6fa0;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.adoption-status-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    background: #f8f9fa;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px #e5e7eb;
+    padding: 2rem 1.5rem;
+    margin: 2rem 0;
+    width: 100%;
+    max-width: 700px;
+}
+.animal-info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+.animal-img {
+    width: 180px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px #e0f7fa;
+    background: #fff;
+}
+.animal-details {
+    flex: 1;
+}
+.animal-details h2 {
+    color: #4fc3f7;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.animal-details p {
+    font-size: 1.1rem;
+    color: #374151;
+    margin-bottom: 0.3rem;
+}
+.status-info {
+    width: 100%;
+    text-align: left;
+    margin-top: 1rem;
+}
+.status-label {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px #d1fae5;
+}
+.status-date {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.no-adoption-card {
+    max-width: 500px;
+    margin: 4rem auto 0 auto;
+    background: #f8f9fa;
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 8px #e5e7eb;
+    padding: 2.5rem 2rem;
+    text-align: center;
+}
+.no-adoption-card h2 {
+    color: #f87171;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.no-adoption-card p {
+    font-size: 1.15rem;
+    color: #374151;
+    margin-bottom: 2rem;
+}
+.adopt-btn {
+    display: inline-block;
+    background: #3a6fa0;
+    color: #fff;
+    padding: 0.7rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 8px #e5e7eb;
+    transition: background 0.2s;
+}
+.adopt-btn:hover {
+    background: #005c97;
+}
+/* Add these styles for success/cancel/no-application cards */
+.adoption-status-success-bg {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e0eafc 0%, #f8f9fa 100%);
+}
+.adoption-status-success-card {
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 24px #dbeafe;
+    padding: 3rem 2.5rem;
+    max-width: 480px;
+    width: 95%;
+    text-align: center;
+    margin: auto;
+    position: relative;
+}
+.adoption-status-success-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
+    color: #3a6fa0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.adoption-status-success-card h2 {
+    color: #3a6fa0;
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.adoption-status-success-card p {
+    font-size: 1.18rem;
+    color: #374151;
+    margin-bottom: 2rem;
+}
+.adoption-status-success-card .adopt-btn {
+    display: inline-block;
+    background: #4fc3f7;
+    color: #fff;
+    padding: 0.7rem 2.2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 2px 8px #e5e7eb;
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+}
+.adoption-status-success-card .adopt-btn:hover {
+    background: #3a6fa0;
+}
+@media (max-width: 700px) {
+    .adoption-status-main {
+        padding: 1rem 0.3rem;
+    }
+    .adoption-status-card {
+        padding: 1rem 0.5rem;
+    }
+    .animal-info {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .animal-img {
+        width: 100%;
+        height: 160px;
+    }
+    .adoption-status-success-card {
+        padding: 1.5rem 0.7rem;
+    }
+    .adoption-status-success-bg {
+        min-height: 60vh;
+    }
+}

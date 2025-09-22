@@ -1,0 +1,210 @@
+/* ==============================================
+   Volunteer Analytics Stylesheet
+   - Adapted from donationAnalytics.css for consistency
+============================================== */
+
+/* --- Font & Body --- */
+body {
+    background: #B6CBDF; /* Page background color */
+    font-family: 'Hind Siliguri', sans-serif;
+    color: #333;
+}
+
+/* CORRECTED CONTAINER STYLE */
+.container {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 30px;
+    background: #f8fafc; /* Added white background */
+    border-radius: 16px; /* Added rounded corners */
+    box-shadow: 0 4px 24px rgba(174,151,135,0.1); /* Added shadow */
+}
+
+h1 {
+    text-align: center;
+    color: #2f5c89; /* Primary dark blue */
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+h1 i {
+    color: #ae9787; /* Tan accent color */
+}
+
+/* --- Stats Cards Grid --- */
+.stats-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.stats-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px 20px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(174,151,135,0.08);
+    transition: all 0.3s ease;
+    border-top: 4px solid #ae9787; /* Accent border */
+}
+
+.stats-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(174,151,135,0.15);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    color: #ae9787;
+    margin-bottom: 12px;
+}
+
+.stats-card h2 {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.stat-number {
+    font-size: 2.4rem;
+    color: #1e293b;
+    margin: 0;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* --- Charts Section --- */
+.charts-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.chart-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px 24px;
+    box-shadow: 0 4px 20px rgba(174,151,135,0.08);
+}
+
+.chart-card.full-width {
+    grid-column: 1 / -1;
+}
+
+.chart-card h3 {
+    font-size: 1.2rem;
+    color: #374151;
+    margin-bottom: 24px;
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.chart-card h3 i {
+    color: #ae9787;
+}
+
+/* Canvas responsiveness */
+canvas {
+    max-height: 350px !important;
+    width: 100% !important;
+}
+
+/* --- Insights Section --- */
+.insights-section {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.insight-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(174,151,135,0.08);
+}
+
+.insight-card h3 {
+    font-size: 1.4rem;
+    color: #1e293b;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.insight-card h3 i {
+    color: #f59e0b; /* Yellow for insights */
+}
+
+.insights-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.insights-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+/* Insight colors for different states */
+.insight-success { background-color: #dcfce7; color: #166534; border-left: 4px solid #22c55e; }
+.insight-warning { background-color: #fef3c7; color: #92400e; border-left: 4px solid #f59e0b; }
+.insight-info { background-color: #dbeafe; color: #1e40af; border-left: 4px solid #3b82f6; }
+.insights-list li i { font-size: 1.1em; }
+
+/* Additional Stats Grid */
+.stats-grid-small {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    background: #f8fafc;
+    border-radius: 8px;
+}
+.stat-label {
+    font-weight: 500;
+    color: #475569;
+}
+.stat-value {
+    font-weight: 600;
+    color: #1e293b;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 1200px) {
+    .container { margin: 15px; padding: 20px; }
+    .charts-section, .insights-section { grid-template-columns: 1fr; gap: 20px; }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    .stats-cards { grid-template-columns: 1fr 1fr; gap: 15px; }
+    canvas { max-height: 250px !important; }
+}

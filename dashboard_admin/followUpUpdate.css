@@ -1,0 +1,190 @@
+*{
+    font-family: 'Hind Siliguri', Arial, sans-serif;
+}
+body {
+    margin-left: 240px;
+    font-family: 'Hind Siliguri', Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.form-buttons{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.page-heading {
+    display: flex;
+    color: #3a6fa0;
+    padding: 20px 30px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+.content-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.container{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+label {
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+/* Inputs and select */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    padding: 10px 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Textarea resize */
+textarea {
+    resize: vertical;
+}
+
+/* Buttons */
+button.updateBtn,
+a.deleteBtn {
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* Update button */
+button.updateBtn {
+    background-color: #3a6fa0;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button.updateBtn:hover {
+    background-color: #2c5275;
+}
+
+/* Cancel / delete button */
+a.deleteBtn {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+a.deleteBtn:hover {
+    background-color: #c0392b;
+}
+
+/* Paragraphs */
+p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Select box alignment */
+select {
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .content-container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    button.updateBtn,
+    a.deleteBtn {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
+
+/* Style for the criteria questions */
+.criteria-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping to the next line */
+  gap: 20px; /* Adds space between items */
+}
+
+/* Style for each question and select dropdown */
+.criteria-item {
+  width: calc(50% - 10px); /* 50% width minus gap */
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+select {
+  width: 100%; 
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/
+.form-buttons {
+  margin-top: 20px;
+}
+
+button.updateBtn, .cancelBtn {
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+  background-color: #2980b9;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.updateBtn:hover, .cancelBtn:hover {
+  background-color: #1d6fa5;
+}
+

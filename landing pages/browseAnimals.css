@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+body {
+    background-color: #B6CBDF;
+    font-family: 'Hind Siliguri', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+/* Filters Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    width: 230px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex: 0 0 280px; 
+    max-width: 200px;
+    max-height: 68vh;
+    overflow-y: auto;
+    position: sticky;
+    top: 20px;
+}
+
+.sidebar .title {
+    font-size: 22px;
+    margin-bottom: 16px;
+    color: #2c3e50;
+    border-bottom: 2px solid #d3d3d3;
+    padding-bottom: 8px;
+    font-weight: 600;
+}
+
+.filters-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.filters-form label {
+    font-weight: 500;
+    color: #444;
+    font-size: 15px;
+}
+
+.filter-input,
+.species-select,
+.sex-select {
+    padding: 10px;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: white;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.filter-input:focus,
+.species-select:focus,
+.sex-select:focus {
+    outline: none;
+    border-color: #3a6fa0;
+}
+
+.apply-filters-btn {
+    background-color: #3a6fa0 !important;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-filters-btn:hover {
+    background-color: #2f5c89;
+}
+
+/* AGE RANGE SLIDER*/
+.slide-container {
+    margin-bottom: 1rem;
+}
+
+.range-slider {
+    position: relative;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.range-slider input[type=range] {
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background: none;
+    pointer-events: none;
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Thumb styles */
+.range-slider input[type=range]::-webkit-slider-thumb {
+    pointer-events: all;
+    width: 20px;
+    height: 20px;
+    background: #2f5c89;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -6px;
+}
+
+.range-slider input[type=range]::-moz-range-thumb {
+    pointer-events: all;
+    width: 20px;
+    height: 20px;
+    background: #2f5c89;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+/* Z-Index Fix for Overlapping Thumbs */
+.range-slider input.thumb-left {
+    z-index: 3;
+}
+
+.range-slider input.thumb-right {
+    z-index: 2;
+}
+
+/* range slider */
+.range-slider .slider-track {
+    position: absolute;
+    height: 8px;
+    background: #2f5c89;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    border-radius: 4px;
+    width: 100%;
+}
+
+
+.form_control {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    color: #635a5a;
+}
+
+/* ANIMAL CARD DISPLAY */
+.content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    align-items: start;
+}
+
+/* Card Styling */
+.card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+    max-width: 500px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image-container {
+    position: relative;
+    width: 100%;
+    height: 400px; 
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+
+}
+
+.card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+/* AVAILABLE badge */
+.badge.available {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #58c592;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+/* Animal Type Tag */
+.type-tag {
+    background: #eee;
+    color: #555;
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    justify-content: center;
+}
+
+/* Card Content */
+.animal-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.animal-info strong {
+    margin-right: 4px;
+}
+.card-info {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-info h3 {
+    font-size: 23px;
+    color: #333;
+}
+
+.card-info p {
+    display: flex;
+    margin: 2px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.card-info .breed {
+    justify-content: left;
+    padding-left: 10px;
+}
+
+.card-info .description {
+    font-size: 13px;
+    color: #777;
+    margin: 8px 0;
+    align-items: center;
+}
+
+/* View Button */
+.details-btn {
+    display: inline-block;
+    background: #3a6fa0;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 20px;     
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+    align-self: center;       
+    margin-top: 15px;
+    margin-bottom: 0;         
+}
+
+.details-btn:hover {
+    background: #2f5c89;
+    transform: translateY(-2px);
+}
+
+.details-btn:active {
+    transform: translateY(0);
+}

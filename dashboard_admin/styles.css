@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap');
+       body {
+    font-family: 'Hind Siliguri', sans-serif;
+    background-color: #B6CBDF;
+    color: #000000;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    margin-left: 270px;
+}
+
+.header {
+    background-color: #AE9787;
+    color: #FFFFFF;
+    padding: 20px;
+    margin: -20px -20px 20px -20px;
+    text-align: center;
+}
+
+.admin-section {
+    background-color: #F9F3EF;
+    color: #000000;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    border: 2px solid #1B3C53;
+}
+
+.stats-section {
+    background-color: #456882;
+    color: #FFFFFF;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    border: 2px solid #1B3C53;
+}
+
+.btn-reset {
+    background-color: #f39c12;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-reset:hover {
+    background-color: #e67e22;
+}
+h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 600;
+    color: #1B3C53;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #456882;
+}
+
+.stats-section h2 {
+    color: #FFFFFF;
+}
+
+.btn-primary {
+    background-color: #456882;
+    color: #FFFFFF;
+    border: 2px solid #1B3C53;
+    padding: 10px 20px;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-primary:hover {
+    background-color: #1B3C53;
+}
+
+.btn-secondary {
+    background-color: #AE9787;
+    color: #FFFFFF;
+    border: 2px solid #1B3C53;
+    padding: 8px 15px;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #F9F3EF;
+    border: 2px solid #1B3C53;
+    margin: 15px 0;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #1B3C53;
+}
+
+th {
+    background-color: #AE9787;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+input, textarea, select {
+    padding: 8px;
+    border: 2px solid #1B3C53;
+    border-radius: 4px;
+    font-family: 'Hind Siliguri', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #456882;
+}
+
+.status-pending {
+    color: #AE9787;
+    font-weight: 600;
+}
+
+.status-approved {
+    color: #456882;
+    font-weight: 600;
+}
+
+.status-rejected {
+    color: #1B3C53;
+    font-weight: 600;
+}
+
+.status-completed {
+    color: #456882;
+    font-weight: 600;
+}
+
+.status-progress {
+    color: #AE9787;
+    font-weight: 600;
+}
+
+.stats-table {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.stats-table th {
+    background-color: #1B3C53;
+    color: #FFFFFF;
+}
+
+.highlight-number {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.quick-actions {
+    background-color: #456882;
+    color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #1B3C53;
+}
+
+.quick-actions h2 {
+    color: #FFFFFF;
+    margin-top: 0;
+}
+
+.quick-actions ul li {
+    margin: 10px 0;
+}

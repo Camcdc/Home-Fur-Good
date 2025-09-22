@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+
+body {
+    font-family: 'Hind Siliguri', sans-serif;
+    background-color: #B6CBDF;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Form container */
+.form-container {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(52,152,219,0.15);
+    max-width: 900px;
+    margin: 3rem auto;
+    width: 95%;
+    transition: box-shadow 0.3s;
+}
+.form-container:hover {
+    box-shadow: 0 12px 40px rgba(52,152,219,0.22);
+}
+
+/* Form headings */
+h1 {
+    text-align: center;
+    color: #3498db;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+h2 {
+    color: #2980b9;
+    margin-top: 30px;
+    margin-bottom: 18px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+/* Input fields and textareas */
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-top: 7px;
+    margin-bottom: 18px;
+    border: 1px solid #bcdffb;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+    background: #f8fbff;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+placeholder,
+textarea::placeholder {
+    color: #e0eafc;
+    opacity: 1;
+}
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #3a6fa0;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.18);
+    outline: none;
+}
+textarea {
+    min-height: 70px;
+    resize: vertical;
+}
+
+/* Row for inline fields */
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 10px;
+}
+.row .col {
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 18px;
+}
+
+/* Labels */
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 7px;
+    color: #34495e;
+    letter-spacing: 0.5px;
+}
+
+/* Submit button */
+input[type="submit"] {
+    background: linear-gradient(90deg, #3498db 60%, #6dd5fa 100%);
+    color: #fff;
+    padding: 14px 0;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+    margin-top: 2rem;
+    width: 100%;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(52,152,219,0.10);
+}
+input[type="submit"]:hover {
+    background: linear-gradient(90deg, #2980b9 60%, #3498db 100%);
+    box-shadow: 0 4px 16px rgba(52,152,219,0.18);
+}
+
+/* Notification styling */
+.notification {
+    background: #ffe0e0;
+    color: #c0392b;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    display: none;
+    font-size: 1rem;
+    box-shadow: 0 2px 8px rgba(192,57,43,0.08);
+}
+
+@media (max-width: 800px) {
+    .form-container {
+        padding: 1.2rem 0.5rem;
+        margin: 1.5rem auto;
+    }
+    .row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .row .col {
+        min-width: 100%;
+    }
+}
+
+input::placeholder, textarea::placeholder {
+    color: #9ab1b3;
+    opacity: 1;  
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+    color: #9ab1b3; 
+}

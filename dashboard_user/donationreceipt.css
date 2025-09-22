@@ -1,0 +1,57 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #B6CBDF;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.donation {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+    margin: 20px auto;
+    padding: 20px 30px;
+    max-width: 400px;
+    border-left: 6px solid #34495e;
+}
+
+.donation p {
+    margin: 8px 0;
+    font-size: 1.05em;
+    color: #34495e;
+}
+
+.donation strong {
+    color: #34495e;
+}
+button {
+    background: #3a6fa0;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover, input[type="submit"]:hover {
+    background: #3a6fa0;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 500px) {
+    .donation {
+        padding: 15px;
+        max-width: 95vw;
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+}

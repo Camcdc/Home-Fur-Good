@@ -1,0 +1,259 @@
+/* Reset some defaults */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f3f6fa;
+  color: #222;
+  padding-top: 56px; /* Prevent content hiding under nav */
+}
+
+/* Navigation bar styling */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 56px;
+  background-color: #3a6fa0;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 32px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.2s;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover, nav a.active {
+  color: #ae9787;
+  border-bottom-color: #ae9787;  /* Adding border for active state */
+}
+
+/* Dashboard layout */
+.dashboard-layout {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  margin-top: 56px; /* Adjust for navbar */
+}
+
+/* Container for dashboard content */
+.container {
+  flex: 1;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* Dashboard header */
+.container h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #3a6fa0;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 6px rgba(58,111,160,0.08);
+}
+
+/* Stat cards section */
+.stat-cards {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 40px;
+  flex-wrap: wrap; /* Make cards wrap in smaller screens */
+}
+
+/* Individual stat card */
+.card {
+  background-color: #fff !important; /* Solid white, override previous */
+  border: 1px solid #3a6fa0;
+  border-radius: 14px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(174,151,135,0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 1 300px; /* Flex properties to control card width */
+  min-width: 250px; /* Minimum width */
+}
+
+.card:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 4px 16px rgba(174,151,135,0.12);
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  color: #3a6fa0;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+
+/* Dashboard main sections */
+.dashboard-section {
+      display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+/* Each vertical section */
+.section {
+  background-color: #fff !important; /* Solid white, override previous */
+  border: 1px solid #3a6fa0;
+  border-radius: 14px;
+  padding: 24px 28px;
+  box-shadow: 0 2px 8px rgba(174,151,135,0.06);
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  margin-bottom: 24px;
+  flex: 1 1 300px; /* Allow flexbox layout */
+}
+
+/* Section header and button */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3a6fa0;
+}
+
+.add-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #3a6fa0;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(58,111,160,0.08);
+  transition: background 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+
+.add-btn:hover {
+  background-color: #28527a;
+  transform: translateY(-2px) scale(1.03);
+}
+
+.section .add-btn {
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+
+.btn-text {
+  margin-left: 4px;
+}
+
+.material-symbols-outlined {
+  font-size: 22px;
+  vertical-align: middle;
+}
+
+/* List inside section */
+.section-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  max-height: 450px;
+}
+
+/* Each list item styling */
+.list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  transition: background-color 0.2s;
+}
+
+.list-item:hover {
+  background-color: #b6cbdf;
+}
+
+.item-title {
+  font-weight: 600;
+  color: #3b3b3b;
+}
+
+.item-subtitle {
+  font-size: 14px;
+  color: #4b5563;
+  margin-top: 4px;
+}
+
+.item-date {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+
+/* ICONS */
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  ;
+  vertical-align: middle;
+}
+
+/* Extra dashboard styling for a professional look */
+.container h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #3a6fa0;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+.welcome-msg {
+  font-size: 1.1rem;
+  color: #7a8597;
+  margin-bottom: 30px;
+}
+
+/* Responsive button container */
+.section-header + div[style*="display: flex"] {
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 1100px) {
+  .dashboard-section {
+    flex-direction: column;
+  }
+
+  .section {
+    min-width: unset;
+  }
+}

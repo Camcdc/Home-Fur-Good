@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap');
+
+*{
+  font-family: "Hind Siliguri", sans-serif;
+}
+body {
+  margin: 0;
+  font-family: "Hind Siliguri", sans-serif;
+  background-color: #b6cbdf;
+  padding-left: 270px; 
+}
+.page-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 20px 0 20px;
+    background: transparent;
+}
+.page-heading h2 {
+    font-size: 38px;
+    color: #2c3e50;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 8px 0;
+    position: relative;
+}
+.heading-underline {
+    width: 60%;
+    height: 2px;
+    background: #e0eafc;
+    margin: 0 auto 18px auto;
+    border-radius: 2px;
+}
+
+
+h2 {
+    color: #2c3e50;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 26px;
+    text-align: left;
+    border-bottom: none;
+}
+
+.column img,
+img.uploaded-picture {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(44,62,80,0.10);
+    display: block;
+    margin: 0 auto 15px auto;
+}
+.table-container{
+  padding: 30px;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  border-color: #ffffff;
+}
+
+th, td {
+	font-family: "Hind Siliguri", sans-serif;
+  padding: 16px;
+  text-align: left;
+}
+
+th {
+    text-align: left;
+    font-size: 15px;
+    padding: 16px;
+    background-color: #f1f5f9;
+    color: #2c3e50;
+}
+
+th:first-child {
+  border-top-left-radius: 16px;
+}
+th:last-child {
+  border-top-right-radius: 16px;
+}
+tr:last-child td:first-child {
+  border-bottom-left-radius: 16px;
+}
+tr:last-child td:last-child {
+  border-bottom-right-radius: 16px;
+}
+
+button {
+  padding: 6px 12px;
+  margin: 2px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: white;
+}
+
+
+button[name="approve"], button[name="reject"] {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #2980b9; 
+  color: white; 
+  font-weight: bold;
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Rounded corners */
+  text-align: center;
+  cursor: pointer; /* Show pointer on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+/* Approve button specific color */
+button[name="approve"] {
+  background-color: #28a745; /* Green background for approve button */
+}
+
+button[name="approve"]:hover {
+  background-color: #218838; /* Darker green on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Reject button specific color */
+button[name="reject"] {
+  background-color: #dc3545; /* Red background for reject button */
+}
+
+button[name="reject"]:hover {
+  background-color: #c82333; /* Darker red on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Focus effect for both buttons */
+button[name="approve"]:focus, button[name="reject"]:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: 0 0 4px rgba(52, 152, 219, 0.6); /* Subtle glow effect on focus */
+}
+
+.view-icon {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 1.3em;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: color 0.2s;
+}
+.view-icon:hover {
+  color: #0077cc;
+}
+
+/* Modal styles for animal image */
+.animal-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+.animal-modal.active {
+  display: flex;
+}
+.animal-modal-content {
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  max-width: 400px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.animal-modal-content img {
+  max-width: 350px;
+  max-height: 60vh;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+.animal-modal-close {
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 8px;
+}
+.fa{
+    color: #ffffff;
+}
+.updateBtn-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 32px;
+    margin-bottom: 10px;
+}
+.updateBtn {
+    background: #3a6fa0;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+.updateBtn:hover {
+    background: #005c97;
+}
+
+
+a.view-application {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #3a6fa0; 
+  color: white; 
+  font-weight: bold;
+  text-decoration: none; 
+  border-radius: 8px; 
+  text-align: center;
+  transition: background-color 0.3s, transform 0.2s; 
+}
+
+a.view-application:hover {
+  background-color: #1d6fa5; 
+  transform: translateY(-2px); 
+}
+
+a.view-application:focus {
+  outline: none;
+  box-shadow: 0 0 4px rgba(52, 152, 219, 0.6); 
+}
+

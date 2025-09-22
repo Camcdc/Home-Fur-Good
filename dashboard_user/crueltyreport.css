@@ -1,0 +1,202 @@
+/* Import font for consistency */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+/* Reset & Base */
+* {
+    font-family: 'Hind Siliguri', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #B6CBDF;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Headings */
+h1, h2 {
+    text-align: center;
+    color: #2f5c89;
+    padding: 20px 0 0 0;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+}
+
+/* Section Layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px auto;
+    max-width: 1200px;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.column {
+    flex: 1 1 250px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 8px;
+}
+
+.column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.full-width {
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-align: center;
+    background: #fff;
+}
+
+/* Images */
+.column img,
+img.uploaded-picture {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(44,62,80,0.10);
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+/* Table */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 32px auto;
+    background-color: #fff;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px; /* Increased width for a wider table */
+}
+
+th, td {
+    padding: 16px 18px;
+    text-align: left;
+}
+
+th {
+    background-color: #eaf6f6;
+    color: #2f5c89;
+    font-weight:auto;
+    border-bottom: 2px solid #b6cbdf;
+}
+
+td {
+    font-weight: 400;
+    color: #333;
+    border-bottom: 1px solid #eaf6f6;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Buttons */
+input[type="submit"], button {
+    background: #3a6fa0;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 1px 4px rgba(44,62,80,0.10);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover, button:hover {
+    background: #2f5c89;
+    transform: scale(1.05);
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #3a6fa0;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #2f5c89;
+}
+
+/* Form Elements */
+input[type="file"], input[type="text"], select, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'Hind Siliguri', sans-serif;
+    transition: border-color 0.3s;
+    margin-bottom: 15px;
+}
+
+input[type="file"]:focus, input[type="text"]:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #3a6fa0;
+}
+
+/* Form Container */
+.form {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+    padding: 32px 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 1.5em;
+    }
+    .row {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    .column {
+        margin: 10px 0;
+    }
+    table {
+        width: 100%;
+    }
+    .form {
+        padding: 16px;
+    }
+}
+button[type="button"] {
+    background: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 1px 4px rgba(44,62,80,0.10);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}

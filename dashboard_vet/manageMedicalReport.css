@@ -1,0 +1,216 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+/* BASE RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+/* PAGE LAYOUT */
+body {
+    margin-left: 240px; /* accommodates sidebar */
+    padding: 20px;
+    background-color: #b6cbdf;
+    min-height: 100vh;
+}
+
+/* PAGE HEADING */
+.page-heading {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.page-heading h2 {
+    font-size: 38px;
+    color: #2c3e50;
+    border-bottom: 2px solid #a2bbd3;
+    padding-bottom: 5px;
+}
+
+/* MAIN CONTAINER */
+.content-container {
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* SECTION BOX */
+.section-box {
+    background-color: #f1f5f9;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #a2bbd3;
+    padding-bottom: 5px;
+}
+
+/* FILTER FORM */
+.filters-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.filter-input,
+.filter-select {
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    flex: 1;
+    min-width: 200px;
+    height: 44px;
+    color: #333;
+}
+
+.filter-button {
+    background-color: #3a6fa0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    height: 44px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+.filter-button:hover {
+    background-color: #316393;
+}
+
+/* TABLE STYLING */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+th {
+    background-color: #f1f5f9;
+    color: #3d3d3d;
+    text-align: left;
+    padding: 16px;
+    font-size: 15px;
+    border-bottom: 1px solid #d1d5db;
+}
+
+td {
+    padding: 15px;
+    font-size: 15px;
+    color: #333;
+    border-top: 1px solid #eee;
+    vertical-align: middle;
+}
+
+td img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* BUTTON STYLES INSIDE TABLE */
+a.updateBtn,
+a.deleteBtn,
+a.viewBtn {
+    display: inline-block;
+    padding: 8px 16px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+a.updateBtn,
+a.viewBtn {
+    background-color: #3a6fa0;
+}
+
+a.updateBtn:hover,
+a.viewBtn:hover {
+    background-color: #316393;
+}
+
+a.deleteBtn {
+    background-color: #f44336;
+}
+
+a.deleteBtn:hover {
+    background-color: #d32f2f;
+}
+
+/* MEDICAL STATUS TEXT */
+td span {
+    font-weight: 600;
+}
+
+/* SUCCESS / ERROR */
+.success {
+    color: green;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* RESPONSIVE TABLE */
+@media (max-width: 768px) {
+    body {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .filters-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-input,
+    .filter-select {
+        min-width: 100%;
+    }
+
+    table {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    th, td {
+        padding: 12px;
+    }
+
+    td img {
+        width: 100px;
+        height: auto;
+    }
+}

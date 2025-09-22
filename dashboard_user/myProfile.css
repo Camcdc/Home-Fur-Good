@@ -1,0 +1,91 @@
+.body{
+    background-color: #B6CBDF;
+    padding-top: 25px;
+}
+.page-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 35px;
+    background-color: #B6CBDF;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.profile-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.profile-heading h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+    color: #333;
+}
+
+.profile-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.fields label {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+.fields input[readonly] {
+    border: none;
+    background: transparent;
+    color: #222;
+    font-size: 16px;
+    padding: 6px 0;
+    width: 100%;
+    pointer-events: none;  
+}
+
+
+.fields input[readonly] {
+    border-bottom: 1px solid #ddd;
+}
+
+
+.profile-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.btn-edit,
+.btn-logout {
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-edit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-edit:hover {
+    background-color: #45a049;
+}
+
+.btn-logout {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-logout:hover {
+    background-color: #c0392b;
+}

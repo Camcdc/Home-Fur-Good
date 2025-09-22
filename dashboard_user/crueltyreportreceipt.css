@@ -1,0 +1,63 @@
+H1{
+    text-align: center;
+    margin-top: 20px;
+    color: #3a6fa0;
+}
+body {
+    background-color: #B6CBDF;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    font-family: 'Hind Siliguri', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+.donation-receipt {
+    background: #fff;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+/* Table */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 32px auto;
+    background-color: #fff;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px; /* Increased width for a wider table */
+}
+
+th, td {
+    padding: 16px 18px;
+    text-align: left;
+}
+
+th {
+    background-color: #eaf6f6;
+    color: #2f5c89;
+    font-weight:auto;
+    border-bottom: 2px solid #b6cbdf;
+}
+
+td {
+    background-color: #fff;
+    font-weight: auto;
+    color: #333;
+    border-bottom: 2px solid #eaf6f6;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}

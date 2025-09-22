@@ -1,0 +1,96 @@
+/* Filter container styles */
+.filter-container {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Filter bar styling */
+.filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 10px 15px;
+}
+
+/* Label for the filter */
+.filter-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-right: 10px;
+}
+
+/* Dropdown styling */
+.filter-select {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Change border color on focus */
+.filter-select:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+/* Change background color on hover */
+.filter-select:hover {
+    background-color: #f8f9fa;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f1f5f9;
+    color: #2c3e50;
+    font-size: 18px;
+}
+
+td {
+    color: #555;
+    font-size: 16px;
+}
+
+/* Update button styling */
+.updateBtn {
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.updateBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Handle empty state */
+p {
+    font-size: 18px;
+    color: #555;
+}

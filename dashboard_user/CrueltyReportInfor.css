@@ -1,0 +1,91 @@
+/* Import font for consistency */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+body {
+    background: #b6cbdf;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #24527a;
+    padding: 40px 0 0 0;
+    font-size: 2.5em;
+    letter-spacing: 1.5px;
+    margin-bottom: 32px;
+    font-weight: 700;
+    text-shadow: 0 2px 8px #eaf6fa;
+}
+
+.info-container {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(44,62,80,0.10);
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px 32px;
+    border: 1px solid #eaf6fa;
+    transition: box-shadow 0.2s;
+}
+.info-container:hover {
+    box-shadow: 0 12px 48px rgba(44,62,80,0.13);
+}
+
+p, ol {
+    font-size: 1.15em;
+    color: #374151;
+    margin-bottom: 20px;
+}
+
+ol {
+    padding-left: 28px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+strong {
+    color: #24527a;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+        padding: 24px 0 0 0;
+    }
+    .info-container {
+        padding: 18px;
+        margin: 12px;
+    }
+    p, ol {
+        font-size: 1em;
+    }
+}
+
+button {
+    display: block;
+    margin: 32px auto 0 auto;
+    padding: 14px 32px;
+    font-size: 1.15em;
+    color: #fff;
+    background: linear-gradient(90deg, #24527a 0%, #3a6fa0 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 2px 8px #eaf6fa;
+    transition: background 0.3s, box-shadow 0.2s;
+}
+button:hover {
+    background: #1a3c5a;
+    box-shadow: 0 6px 18px #b6cbdf;
+}

@@ -1,0 +1,208 @@
+/* Import font for consistency */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+/* Reset and base styles */
+* {
+    font-family: 'Hind Siliguri', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #B6CBDF;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 40px auto 0 auto;
+    padding: 32px 24px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(44,62,80,0.08);
+}
+
+.dashboard-heading h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #3a6fa0;
+    letter-spacing: 1px;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.stat-cards {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.card {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #b6cbdf;
+    border-radius: 12px;
+    padding: 28px 24px;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.card:hover {
+    box-shadow: 0 4px 16px rgba(44,62,80,0.13);
+    transform: translateY(-2px) scale(1.02);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #3a6fa0;
+}
+
+.card p {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    color: #3a6fa0;
+}
+
+.dashboard-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.section {
+    flex: 1 1 320px;
+    background: #fff;
+    border: 1px solid #b6cbdf;
+    border-radius: 12px;
+    padding: 24px 20px;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.06);
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    margin-bottom: 24px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #b6cbdf;
+    padding-bottom: 8px;
+}
+
+.section-header h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2f5c89;
+    margin: 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.add-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #3a6fa0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(44,62,80,0.10);
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+.add-btn:hover {
+    background: #2f5c89;
+    transform: scale(1.05);
+}
+
+.btn-text {
+    margin-left: 4px;
+}
+
+.section-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.list-item {
+    background: #eaf6f6;
+    border-radius: 8px;
+    padding: 14px 16px;
+    box-shadow: 0 1px 4px rgba(44,62,80,0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.list-item:hover {
+    background: #dbeaf3;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.item-title {
+    font-weight: 600;
+    color: #2f5c89;
+    font-size: 1rem;
+}
+
+.item-subtitle {
+    font-size: 0.98rem;
+    color: #3a6fa0;
+}
+
+.item-date {
+    font-size: 0.93rem;
+    color: #555;
+}
+
+a {
+    text-decoration: none;
+    color: #3a6fa0;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #2f5c89;
+}
+
+@media (max-width: 900px) {
+    .dashboard-section {
+        flex-direction: column;
+    }
+    .stat-cards {
+        flex-direction: column;
+    }
+    .section {
+        min-width: unset;
+    }
+    .container {
+        padding: 16px 6px;
+    }
+}

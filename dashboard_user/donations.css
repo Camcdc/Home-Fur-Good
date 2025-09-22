@@ -1,0 +1,266 @@
+/* Import font for consistency */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Hind Siliguri', sans-serif;
+    font-size: 16px;
+    background-color: #B6CBDF;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Headings */
+h1, h2 {
+    color: #2f5c89;
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+    padding: 20px 0 0 0;
+}
+
+/* Section Layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px auto;
+    max-width: 1200px;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.column {
+    flex: 1 1 250px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 8px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.column img,
+img.uploaded-picture {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(44,62,80,0.10);
+    display: block;
+    margin: 0 auto 15px auto;
+}
+
+/* Table */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 32px auto;
+    background-color: #fff;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 900px;
+}
+
+th, td {
+    padding: 16px 18px;
+    text-align: left;
+}
+
+th {
+    background-color: #eaf6f6;
+    color: #2f5c89;
+    font-weight: 600;
+    border-bottom: 2px solid #b6cbdf;
+}
+
+td {
+    font-weight: 400;
+    color: #333;
+    border-bottom: 1px solid #eaf6f6;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Buttons */
+input[type="submit"], button {
+    background: #3a6fa0;
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 1px 4px rgba(44,62,80,0.10);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover, button:hover {
+    background: #2f5c89;
+    transform: scale(1.05);
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #3a6fa0;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #2f5c89;
+}
+
+/* Form Container */
+.donation-form {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(44,62,80,0.08);
+    margin: 30px auto 20px auto;
+    padding: 32px 24px;
+    max-width: 90%;
+}
+
+.donation-form table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.donation-form td {
+    padding: 10px 5px;
+}
+
+.donation-form label {
+    font-weight: 500;
+    color: #34495e;
+}
+
+.donation-form input[type="number"],
+.donation-form input[type="date"],
+.donation-form input[type="text"],
+.donation-form select,
+.donation-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-family: 'Hind Siliguri', sans-serif;
+    transition: border-color 0.3s;
+    margin-bottom: 15px;
+}
+
+.donation-form input:focus,
+.donation-form select:focus,
+.donation-form textarea:focus {
+    outline: none;
+    border-color: #3a6fa0;
+}
+
+.donation-form input[type="submit"] {
+    background: #3a6fa0;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.donation-form input[type="submit"]:hover {
+    background: #2f5c89;
+}
+
+/* Bank details styling */
+.donation-form .bank-details {
+    background: #f7f7f7;
+    border-radius: 12px;
+    box-shadow: 0 1px 6px rgba(44, 62, 80, 0.08);
+    margin: 32px 0 0 0;
+    padding: 24px 28px;
+    border-left: 4px solid #3a6fa0;
+    font-size: 1.08em;
+    max-width: 100%;
+}
+
+.donation-form .bank-details h3 {
+    color: #2f5c89;
+    margin-bottom: 18px;
+    font-size: 1.15em;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.donation-form .bank-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 18px;
+}
+
+.donation-form .bank-label {
+    min-width: 140px;
+    font-weight: 600;
+    color: #3a6fa0;
+    font-size: 1em;
+}
+
+.donation-form .bank-value {
+    font-weight: 500;
+    color: #34495e;
+    font-size: 1em;
+    background: #fff;
+    border-radius: 4px;
+    padding: 6px 12px;
+    box-shadow: 0 1px 2px rgba(44,62,80,0.04);
+}
+
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 1.5em;
+    }
+    .row {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+    .column {
+        margin: 10px 0;
+    }
+    table {
+        width: 100%;
+    }
+    .donation-form {
+        padding: 16px;
+        max-width: 95vw;
+    }
+    .donation-form .bank-details {
+        padding: 10px;
+    }
+    .donation-form .bank-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+    }
+    .donation-form .bank-label {
+        min-width: unset;
+        font-size: 0.98em;
+    }
+}

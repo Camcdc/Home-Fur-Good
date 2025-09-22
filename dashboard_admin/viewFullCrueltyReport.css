@@ -1,0 +1,89 @@
+        body {
+            font-family: Arial, sans-serif;
+            background: #B6CBDF;
+            margin: 0;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2a3a5e;
+            margin-top: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: 30px auto;
+            font-family: Arial, sans-serif;
+            table-layout: fixed;
+            background: #fff;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+            word-wrap: break-word;
+        }
+
+        th {
+            background: white;
+            width: 25%;
+            color: #003d66;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        img {
+            max-width: 200px;
+            max-height: 200px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        button {
+            padding: 10px 18px;
+            cursor: pointer;
+            border: none;
+            background: #3a6fa0;
+            color: #fff;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #2c557a;
+        }
+
+        /* ✅ Constrain detailed description */
+        .description-box {
+            max-width: 600px;
+            max-height: 200px;
+            overflow-y: auto;
+            white-space: wrap;
+            line-height: 1.5;
+            background: #fefefe;
+            padding: 0px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-btn {
+            margin: 20px;
+            display: inline-block;
+        }
